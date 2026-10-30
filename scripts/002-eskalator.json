@@ -1,0 +1,15 @@
+{
+ "title": "Eskalator zinalari qayerga yo'qoladi?",
+ "key": "D",
+ "cover": 1.8,
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz"},
+ "scenes": [
+  {"dur": 3.4, "text": "ESKALATOR *ZINALARI*|TEPADA QAYERGA|YO'QOLADI?", "y": 420, "draw": "escalator", "args": {"speed": 140}, "say": "Eskalator zinalari tepada qayerga yo'qolib qoladi?"},
+  {"dur": 3.0, "text": "ULAR HECH|QAYERGA|*YO'QOLMAYDI*", "draw": "escalator", "args": {"speed": 140, "word": "HALQA"}, "say": "Aslida ular hech qayerga yo'qolmaydi."},
+  {"dur": 3.4, "text": "HAR ZINA UZUN|*ZANJIRGA*|ULANGAN", "draw": "escalator", "args": {"speed": 90, "hl": 0}, "say": "Har bir zina uzun zanjirga mahkamlangan."},
+  {"dur": 3.6, "text": "TEPADA *G'ILDIRAK*|ATROFIDA PASTGA|BURILADI", "draw": "escalator", "args": {"speed": 120, "arrows": true}, "say": "Tepada zinalar tekislanadi va katta g'ildirak atrofida pastga buriladi."},
+  {"dur": 3.6, "text": "OSTIDAN *TESKARI*|HOLDA PASTGA|QAYTADI", "draw": "escalator", "args": {"speed": 120, "arrows": true}, "say": "Keyin eskalator ostidan teskari holda pastga qaytadi."},
+  {"dur": 3.6, "text": "PASTDA YANA|*AYLANIB*|YUQORIGA CHIQADI", "draw": "escalator", "args": {"speed": 160, "word": "CHEKSIZ AYLANISH"}, "say": "Pastda yana aylanib, yuqoriga chiqadi. Bu to'xtovsiz aylanadigan halqa."},
+  {"dur": 3.2, "text": "*SAQLAB* QO'YING|KEYINGISI:|SAMOLYOT NEGA QULAMAYDI?", "small": "@qanday_ishlaydi.uz", "y": 760, "small_y": 1060, "draw": "none", "say": "Saqlab qo'ying! Keyingi videoda: samolyot nega qulamaydi?"}
+ ]
+}

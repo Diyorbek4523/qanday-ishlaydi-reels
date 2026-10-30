@@ -7,7 +7,7 @@ Script: {"title": ..., "key": "A", "scenes": [{"dur": s, "text": "LINE|*ACCENT* 
 Text: "|" breaks lines, *word* is drawn in the accent colour. Draw names are the functions in DRAW below.
 Voice: give scenes a "say" (spoken Uzbek, numbers in words) and the reel gets an ElevenLabs voiceover; scene "dur"
 is then fitted to the speech and the music is ducked under it. Optional "voice": {"id", "model", "lang"}.
-Needs ELEVENLABS_API_KEY; the take is cached next to the script (voice.mp3 + voice.json), so re-renders cost nothing.
+Needs ELEVENLABS_API_KEY; the take is cached next to the script (<script>.voice.mp3 + .voice.json), so re-renders cost nothing.
 Pass --no-voice to ignore "say".
 """
 import base64, hashlib, json, math, os, subprocess, sys, urllib.request, wave
@@ -122,8 +122,66 @@ def bars(d, t, a):  # "80%" style comparison: list of [label, value]
         x = 100 + i * (bw + gap); hh = 600 * v / 100 * eo(seg(t, .3 + i * .3, 1.2 + i * .3))
         d.rectangle([x, CY + 300 - hh, x + bw, CY + 300], fill=ACC if i == a.get('hi', n - 1) else DIM)
         label(d, lab, (x + bw / 2, CY + 360), seg(t, .2, .6), INK, F_TAG)
+def escalator(d, t, a):  # step chain loop: steps ride up on top, turn round the wheels, come back upside down underneath
+    ang = math.radians(-32); ca, sa = math.cos(ang), math.sin(ang); L, R = 640, 95
+    def P(x, y): return (CX + x * ca - y * sa, CY + 60 + x * sa + y * ca)
+    loop = []  # stadium in local coords, x along the incline, clockwise from bottom-left of top run
+    for k in range(25): loop.append((-L / 2 + L * k / 24, -R))
+    for k in range(1, 25): th = -math.pi / 2 + math.pi * k / 24; loop.append((L / 2 + R * math.cos(th), R * math.sin(th)))
+    for k in range(1, 25): loop.append((L / 2 - L * k / 24, R))
+    for k in range(1, 24): th = math.pi / 2 + math.pi * k / 24; loop.append((-L / 2 + R * math.cos(th), R * math.sin(th)))
+    path(d, [P(*q) for q in loop], seg(t, 0, 1.0), DIM, 6, closed=True)
+    for sx in (-L / 2, L / 2):
+        u = seg(t, .6, 1.0); path(d, circle(*P(sx, 0), R - 20, 30), u, INK, 6)
+    per = 2 * L + 2 * math.pi * R; sp = a.get('speed', 120); n = 12; hl = a.get('hl')
+    def at(sd):
+        sd %= per
+        if sd < L: return (-L / 2 + sd, -R), 0
+        sd -= L
+        if sd < math.pi * R: th = -math.pi / 2 + sd / R; return (L / 2 + R * math.cos(th), R * math.sin(th)), th + math.pi / 2
+        sd -= math.pi * R
+        if sd < L: return (L / 2 - sd, R), math.pi
+        sd -= L; th = math.pi / 2 + sd / R; return (-L / 2 + R * math.cos(th), R * math.sin(th)), th + math.pi / 2
+    if t > .8:
+        for i in range(n):
+            (x, y), rot = at(i * per / n + sp * (t - .8)); c, s_ = math.cos(rot), math.sin(rot)
+            top = y < -R + 1; col = ACC if (hl is None or hl == i) else (INK if top else DIM)
+            # a step = tread (along the chain) + riser pointing away from the loop centre
+            tread = [P(x - 34 * c, y - 34 * s_), P(x + 34 * c, y + 34 * s_)]; riser = [P(x - 34 * c, y - 34 * s_), P(x - 34 * c + 40 * s_, y - 34 * s_ - 40 * c)]
+            d.line(tread, fill=col, width=10); d.line(riser, fill=col, width=8)
+    if a.get('arrows') and t > 1.2:
+        arrow(d, P(-L / 2 + 60, -R - 110), P(L / 2 - 60, -R - 110), seg(t, 1.2, 1.7), ACC, 7)
+        arrow(d, P(L / 2 - 60, R + 110), P(-L / 2 + 60, R + 110), seg(t, 1.5, 2.0), RED, 7)
+    if a.get('word'): label(d, a['word'], (CX, CY + 470), seg(t, 1.4, 1.8), ACC, font(80))
+def microwave(d, t, a):  # oven box + travelling wave + water molecules that twist with the field
+    x0, y0, x1, y1 = CX - 380, CY - 260, CX + 380, CY + 260
+    path(d, rrect(x0, y0, x1, y1, 30), seg(t, 0, .9), INK, 9); path(d, rrect(x0 + 40, y0 + 40, x1 - 200, y1 - 40, 20), seg(t, .4, 1.1), DIM, 6)
+    for k in range(3): label(d, '●', (x1 - 100, y0 + 120 + 90 * k), seg(t, .8 + k * .1, 1.0 + k * .1), DIM, F_TAG)
+    if a.get('mag', True):
+        path(d, rrect(x1 - 170, y1 - 130, x1 - 30, y1 - 50, 10), seg(t, .9, 1.2), ACC, 6); label(d, 'MAGNETRON', (x1 - 100, y1 + 50), seg(t, 1.0, 1.4), ACC, F_TAG)
+    if t > 1.0:
+        amp = 60 * eo(seg(t, 1.0, 1.5)); ph = t * 9
+        pts = [(x0 + 60 + k * (x1 - x0 - 280) / 60, CY - 120 + amp * math.sin(k / 60 * 4 * math.pi * 2 - ph)) for k in range(61)]
+        d.line(pts, fill=ACC, width=7, joint='curve')
+    m = a.get('mol', 0); heat = a.get('heat', False)
+    if m:
+        for i in range(m):
+            mx = x0 + 120 + i * (x1 - x0 - 320) / max(1, m - 1); my = CY + 90
+            rot = (.9 * math.sin(t * 14 + i) if t > 1.2 else 0) + i
+            jit = (6 * math.sin(t * 31 + i * 2) if heat and t > 1.5 else 0)
+            u = seg(t, .8 + i * .1, 1.1 + i * .1)
+            if u <= 0: continue
+            ox, oy = mx + jit, my - jit; d.ellipse([ox - 30, oy - 30, ox + 30, oy + 30], outline=RED if heat and t > 1.8 else INK, width=7)
+            for sgn in (-1, 1):
+                hx, hy = ox + 52 * math.cos(rot + sgn * .9), oy + 52 * math.sin(rot + sgn * .9); d.ellipse([hx - 16, hy - 16, hx + 16, hy + 16], outline=DIM, width=6)
+        label(d, 'H₂O', (CX - 100, CY + 200), seg(t, 1.0, 1.4), DIM, F_TAG)
+    if heat and t > 1.8:
+        for k in range(3):
+            x = CX - 260 + 160 * k; ph = (t * 1.5 + k * .33) % 1
+            path(d, [(x + 18 * math.sin((ph + j / 8) * 6), y1 + 60 - 120 * ph - j * 12 + 120) for j in range(8)], 1, RED, 6)
+    if a.get('word'): label(d, a['word'], (CX, y1 + 200), seg(t, 1.4, 1.8), a.get('word_col') == 'red' and RED or ACC, font(80))
 def none(d, t, a): pass
-DRAW = {k: v for k, v in globals().items() if k in ('phone', 'chip', 'gauge', 'switch', 'swell', 'bars', 'none')}
+DRAW = {k: v for k, v in globals().items() if k in ('phone', 'chip', 'gauge', 'switch', 'swell', 'bars', 'escalator', 'microwave', 'none')}
 
 # ---------- text ----------
 def text_block(d, s, t, y=420, f=F_BIG, maxw=W - 140):
@@ -187,10 +245,10 @@ def music(dur, cuts, key='A', sr=44100):
 VOICE = {'id': 'agoC45V78njTIxYzwmSb', 'model': 'eleven_v4', 'lang': 'uz'}  # Davronbek (Uzbek journalist), chosen by the user
 LEAD, TAIL = .3, 1.2  # silence before the first word, hold after the last
 
-def voice_take(S, cache_dir, sr=44100):
+def voice_take(S, cache, sr=44100):
     v = {**VOICE, **S.get('voice', {})}; says = [sc.get('say', '').strip() for sc in S['scenes']]
     text = ' '.join(x for x in says if x); key = hashlib.sha1(json.dumps([v, says]).encode()).hexdigest()[:12]
-    mp3, meta = os.path.join(cache_dir, 'voice.mp3'), os.path.join(cache_dir, 'voice.json')
+    mp3, meta = cache + '.voice.mp3', cache + '.voice.json'
     if not (os.path.exists(meta) and json.load(open(meta)).get('key') == key):
         body = {'text': text, 'model_id': v['model'], **({'language_code': v['lang']} if v.get('lang') and v['model'] == 'eleven_v4' else {})}
         rq = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{v['id']}/with-timestamps?output_format=mp3_44100_128", json.dumps(body).encode(),
@@ -227,7 +285,7 @@ def main(script_path, out, use_voice=True):
     S = json.load(open(script_path)); scenes = S['scenes']; starts = np.cumsum([0] + [s['dur'] for s in scenes])
     vo = None
     if use_voice and any(sc.get('say') for sc in scenes):
-        vo, marks, end = voice_take(S, os.path.dirname(os.path.abspath(script_path))); starts = fit_scenes(scenes, marks, end)
+        vo, marks, end = voice_take(S, os.path.splitext(os.path.abspath(script_path))[0]); starts = fit_scenes(scenes, marks, end)
     dur = float(starts[-1]); bg = background(); wav = out.rsplit('.', 1)[0] + '.wav'
     pcm, sr = music(dur, list(starts[1:-1]), S.get('key', 'A'))
     if vo is not None: pcm = (mix_voice(pcm / 32767, vo, sr) * 32767).astype(np.int16)

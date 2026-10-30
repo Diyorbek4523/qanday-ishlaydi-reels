@@ -1,8 +1,8 @@
 # Mavzular navbati (bajarilganini [x] qiling, yangisini oxiriga qo'shing; har doim kamida 9 ta ochiq mavzu bo'lsin)
 
 - [x] 001 Telefon 100% da nega zaryad olmay qo'yadi? (BMS, 4.2 V)
-- [ ] ESKALATOR pog'onalari qayerga yo'qoladi? (zanjir, pastda aylanib qaytadi)
-- [ ] MIKROTO'LQIN ovqatni qanday isitadi? (suv molekulalari tebranadi, 2.45 GGs)
+- [x] 002 ESKALATOR pog'onalari qayerga yo'qoladi? (zanjir, pastda aylanib qaytadi)
+- [x] 003 MIKROTO'LQIN ovqatni qanday isitadi? (suv molekulalari tebranadi, 2.45 GGs)
 - [ ] SAMOLYOT nega qulamaydi? (qanot shakli, havo bosimi farqi)
 - [ ] TANDIR devoriga non nega yopishadi va pishadi? (issiq loy devor, nurlanish)
 - [ ] MUZLATKICH sovuqni qayerdan oladi? (sovuq yaratmaydi, issiqlikni tashqariga chiqaradi)

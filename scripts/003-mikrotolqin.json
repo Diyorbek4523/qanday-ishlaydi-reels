@@ -1,0 +1,15 @@
+{
+ "title": "Mikroto'lqin ovqatni qanday isitadi?",
+ "key": "E",
+ "cover": 1.8,
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz"},
+ "scenes": [
+  {"dur": 3.4, "text": "MIKROTO'LQIN|OVQATNI *QANDAY*|ISITADI?", "y": 420, "draw": "microwave", "args": {"mag": false}, "say": "Mikroto'lqinli pech ovqatni qanday isitadi?"},
+  {"dur": 3.6, "text": "ICHIDA *MAGNETRON*|TO'LQIN|CHIQARADI", "draw": "microwave", "say": "Uning ichidagi magnetron degan qism ko'zga ko'rinmas to'lqin chiqaradi."},
+  {"dur": 3.6, "text": "SEKUNDIGA|*2.45 MILLIARD*|TEBRANISH", "draw": "microwave", "args": {"word": "2.45 GGs"}, "say": "Bu to'lqin sekundiga ikki yarim milliardga yaqin marta tebranadi."},
+  {"dur": 3.8, "text": "OVQATDAGI *SUV*|MOLEKULALARI|AYLANA BOSHLAYDI", "draw": "microwave", "args": {"mag": false, "mol": 4}, "say": "Ovqatdagi suv molekulalari shu to'lqinga ergashib, u yoqdan bu yoqqa buriladi."},
+  {"dur": 3.8, "text": "ULAR URILIB|*ISSIQLIK*|PAYDO QILADI", "draw": "microwave", "args": {"mag": false, "mol": 4, "heat": true, "word": "ISSIQ", "word_col": "red"}, "say": "Ular bir-biriga urilib, ishqalanadi va shundan issiqlik paydo bo'ladi."},
+  {"dur": 3.4, "text": "SHUNING UCHUN|*SUVI KO'P* OVQAT|TEZ ISIYDI", "draw": "microwave", "args": {"mag": false, "mol": 4, "heat": true}, "say": "Shuning uchun suvi ko'p ovqat tezroq isiydi."},
+  {"dur": 3.2, "text": "*SAQLAB* QO'YING|KEYINGISI:|TELEFON 100% DA NEGA TO'XTAYDI?", "small": "@qanday_ishlaydi.uz", "y": 760, "small_y": 1060, "draw": "none", "say": "Saqlab qo'ying! Keyingi videoda: telefon yuz foizda nega zaryad olmay qo'yadi?"}
+ ]
+}
