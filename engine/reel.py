@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 W, H, FPS = 1080, 1920, 30
 BG, GRID, INK, ACC, RED, DIM = (10, 30, 58), (22, 52, 92), (232, 241, 255), (255, 204, 51), (255, 92, 92), (120, 150, 190)
-FD = '/usr/share/fonts/opentype/inter/'
+FD = os.path.join(os.environ.get('REEL_FONT_DIR', '/usr/share/fonts/opentype/inter'), '')
 def font(sz, w='Black'): return ImageFont.truetype(f'{FD}Inter-{w}.otf', sz)
 F_BIG, F_SMALL, F_TAG = font(92), font(46, 'SemiBold'), font(34, 'Bold')
 
