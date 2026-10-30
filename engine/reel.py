@@ -1,0 +1,251 @@
+#!/usr/bin/env python3
+"""Render a "Qanday ishlaydi?" Reel (1080x1920, 30 fps) from a script JSON: blueprint drawing + big Uzbek text + music.
+
+    python3 reel.py <script.json> <out.mp4>
+
+Script: {"title": ..., "key": "A", "scenes": [{"dur": s, "text": "LINE|*ACCENT* LINE", "small": "...", "draw": name, "args": {...}}]}
+Text: "|" breaks lines, *word* is drawn in the accent colour. Draw names are the functions in DRAW below.
+Voice: give scenes a "say" (spoken Uzbek, numbers in words) and the reel gets an ElevenLabs voiceover; scene "dur"
+is then fitted to the speech and the music is ducked under it. Optional "voice": {"id", "model", "lang"}.
+Needs ELEVENLABS_API_KEY; the take is cached next to the script (voice.mp3 + voice.json), so re-renders cost nothing.
+Pass --no-voice to ignore "say".
+"""
+import base64, hashlib, json, math, os, subprocess, sys, urllib.request, wave
+import numpy as np
+from PIL import Image, ImageDraw, ImageFont
+
+W, H, FPS = 1080, 1920, 30
+BG, GRID, INK, ACC, RED, DIM = (10, 30, 58), (22, 52, 92), (232, 241, 255), (255, 204, 51), (255, 92, 92), (120, 150, 190)
+FD = '/usr/share/fonts/opentype/inter/'
+def font(sz, w='Black'): return ImageFont.truetype(f'{FD}Inter-{w}.otf', sz)
+F_BIG, F_SMALL, F_TAG = font(92), font(46, 'SemiBold'), font(34, 'Bold')
+
+clamp = lambda x, a=0., b=1.: max(a, min(b, x))
+seg = lambda t, a, b: clamp((t - a) / (b - a)) if b > a else float(t >= a)
+eo = lambda x: 1 - (1 - clamp(x)) ** 3
+def pop(x):  # overshoot ease for text pop-in
+    x = clamp(x); c = 1.7
+    return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2
+
+# ---------- drawing primitives (all take progress u 0..1) ----------
+def path(d, pts, u=1., col=INK, w=8, closed=False):
+    if closed: pts = pts + [pts[0]]
+    if u <= 0 or len(pts) < 2: return
+    L = [math.dist(pts[i], pts[i + 1]) for i in range(len(pts) - 1)]; tot = sum(L) * clamp(u); out = [pts[0]]
+    for i, l in enumerate(L):
+        if tot >= l: out.append(pts[i + 1]); tot -= l
+        else:
+            if l: a, b = pts[i], pts[i + 1]; out.append((a[0] + (b[0] - a[0]) * tot / l, a[1] + (b[1] - a[1]) * tot / l))
+            break
+    d.line(out, fill=col, width=w, joint='curve')
+def rrect(x0, y0, x1, y1, r=40, n=6):
+    pts = []
+    for cx, cy, a0 in [(x1 - r, y0 + r, -90), (x1 - r, y1 - r, 0), (x0 + r, y1 - r, 90), (x0 + r, y0 + r, 180)]:
+        pts += [(cx + r * math.cos(math.radians(a0 + 90 * k / n)), cy + r * math.sin(math.radians(a0 + 90 * k / n))) for k in range(n + 1)]
+    return pts
+def circle(cx, cy, r, n=48, a0=0, a1=360): return [(cx + r * math.cos(math.radians(a0 + (a1 - a0) * k / n)), cy + r * math.sin(math.radians(a0 + (a1 - a0) * k / n))) for k in range(n + 1)]
+def arrow(d, a, b, u=1., col=ACC, w=8):
+    path(d, [a, b], u, col, w)
+    if u >= .99:
+        ang = math.atan2(b[1] - a[1], b[0] - a[0])
+        for s in (-1, 1): d.line([b, (b[0] - 34 * math.cos(ang + s * .5), b[1] - 34 * math.sin(ang + s * .5))], fill=col, width=w)
+def label(d, s, xy, u=1., col=DIM, f=None, anchor='mm'):
+    if u > .05: d.text(xy, s, font=f or F_TAG, fill=tuple(int(BG[i] + (col[i] - BG[i]) * clamp(u)) for i in range(3)), anchor=anchor)
+
+# ---------- drawings: f(d, t, local scene time, args) ----------
+CX, CY = W // 2, 1130
+def phone(d, t, a):
+    level = a.get('level', [0, 100]); x0, y0, x1, y1 = CX - 210, CY - 400, CX + 210, CY + 400
+    path(d, rrect(x0, y0, x1, y1, 60), seg(t, 0, 1.0), INK, 9)
+    path(d, [(CX - 50, y0 + 40), (CX + 50, y0 + 40)], seg(t, .6, 1.0), INK, 8)
+    bx0, by0, bx1, by1 = CX - 110, CY - 230, CX + 110, CY + 250
+    path(d, rrect(bx0, by0, bx1, by1, 20), seg(t, .8, 1.6), INK, 7); path(d, [(CX - 40, by0 - 18), (CX + 40, by0 - 18)], seg(t, 1.2, 1.6), INK, 12)
+    p = level[0] + (level[1] - level[0]) * eo(seg(t, 1.4, a.get('fill_t', 3.2)))
+    if p > 0:
+        top = by1 - 14 - (by1 - by0 - 28) * p / 100
+        d.rounded_rectangle([bx0 + 14, top, bx1 - 14, by1 - 14], 10, fill=RED if p < 20 else (ACC if p < 100 else (80, 220, 140)))
+    label(d, f'{int(round(p))}%', (CX, by1 + 70), seg(t, 1.2, 1.6), INK, font(64))
+    if a.get('plug'):
+        path(d, [(CX, y1), (CX, y1 + 120), (CX + 160, y1 + 160)], seg(t, .4, 1.2), DIM, 10)
+        if a.get('bolt', True) and t > 1.4 and int(t * 4) % 2 == 0: label(d, 'TOK', (CX + 290, y1 + 70), 1, ACC, font(48))
+def chip(d, t, a):
+    path(d, rrect(CX - 170, CY - 170, CX + 170, CY + 170, 18), seg(t, 0, .9), INK, 9)
+    for i in range(5):
+        o = -120 + 60 * i
+        for s in (-1, 1):
+            path(d, [(CX + o, CY + s * 170), (CX + o, CY + s * 230)], seg(t, .5 + i * .06, .8 + i * .06), INK, 8)
+            path(d, [(CX + s * 170, CY + o), (CX + s * 230, CY + o)], seg(t, .5 + i * .06, .8 + i * .06), INK, 8)
+    label(d, a.get('name', 'BMS'), (CX, CY), seg(t, .9, 1.3), ACC, font(80))
+    if a.get('eye'):
+        u = seg(t, 1.3, 1.8); path(d, circle(CX, CY - 330, 70, 40, 180, 360) + circle(CX, CY - 330, 70, 40, 0, 180), u, ACC, 7)
+        if u >= 1: d.ellipse([CX - 24, CY - 354, CX + 24, CY - 306], fill=ACC)
+        label(d, a.get('eye'), (CX, CY + 330), seg(t, 1.6, 2.1), DIM, F_TAG)
+def gauge(d, t, a):
+    lo, hi, v0, v1, unit = a.get('lo', 3.0), a.get('hi', 4.4), a.get('from', 3.7), a.get('to', 4.2), a.get('unit', 'V')
+    r = 300; path(d, circle(CX, CY + 120, r, 60, 180, 360), seg(t, 0, 1.0), INK, 10)
+    mark = a.get('mark')
+    for k in range(8):
+        ang = math.radians(180 + 180 * k / 7); c, s_ = math.cos(ang), math.sin(ang)
+        path(d, [(CX + (r - 10) * c, CY + 120 + (r - 10) * s_), (CX + (r - 50) * c, CY + 120 + (r - 50) * s_)], seg(t, .6 + k * .05, .8 + k * .05), INK, 6)
+    if mark is not None:
+        ang = math.radians(180 + 180 * (mark - lo) / (hi - lo))
+        path(d, [(CX + (r + 10) * math.cos(ang), CY + 120 + (r + 10) * math.sin(ang)), (CX + (r + 70) * math.cos(ang), CY + 120 + (r + 70) * math.sin(ang))], seg(t, 1.0, 1.3), RED, 12)
+        label(d, f'{mark} {unit}', (CX + (r + 130) * math.cos(ang), CY + 120 + (r + 120) * math.sin(ang)), seg(t, 1.1, 1.5), RED, F_TAG)
+    v = v0 + (v1 - v0) * eo(seg(t, 1.0, a.get('move_t', 3.0))); ang = math.radians(180 + 180 * (v - lo) / (hi - lo))
+    if t > .9:
+        d.line([(CX, CY + 120), (CX + (r - 70) * math.cos(ang), CY + 120 + (r - 70) * math.sin(ang))], fill=ACC, width=12); d.ellipse([CX - 22, CY + 98, CX + 22, CY + 142], fill=ACC)
+    label(d, f'{v:.2f} {unit}', (CX, CY + 230), seg(t, .9, 1.2), INK, font(72))
+def switch(d, t, a):
+    yl = CY; open_at = a.get('open_t', 1.6); op = eo(seg(t, open_at, open_at + .4))
+    path(d, [(120, yl), (CX - 120, yl)], seg(t, 0, .6), INK, 10); path(d, [(CX + 120, yl), (W - 120, yl)], seg(t, .2, .8), INK, 10)
+    d.ellipse([CX - 136, yl - 16, CX - 104, yl + 16], fill=INK) if t > .6 else None; d.ellipse([CX + 104, yl - 16, CX + 136, yl + 16], fill=INK) if t > .8 else None
+    ang = math.radians(-35 * op); L = 240
+    if t > .8: d.line([(CX - 120, yl), (CX - 120 + L * math.cos(ang), yl + L * math.sin(ang))], fill=ACC, width=14)
+    if op < .5 and t > .9:  # current dots flowing
+        for k in range(8):
+            x = 120 + ((t * 420 + k * 120) % (W - 240)); d.ellipse([x - 12, yl - 60 - 12, x + 12, yl - 60 + 12], fill=ACC)
+    if op >= 1: label(d, a.get('word', "TO'XTA"), (CX, yl + 200), seg(t, open_at + .4, open_at + .8), RED, font(110))
+def swell(d, t, a):
+    s = .5 + .5 * math.sin(t * 6) if t > 1.0 else 0; b = 38 * eo(seg(t, .8, 2.2)) + 6 * s
+    x0, x1, y0, y1 = CX - 170, CX + 170, CY - 280, CY + 280
+    pts = [(x0, y0)] + [(x0 + (x1 - x0) * k / 20, y0 - b * math.sin(math.pi * k / 20)) for k in range(21)] + [(x1 + b * math.sin(math.pi * k / 20), y0 + (y1 - y0) * k / 20) for k in range(21)] \
+        + [(x1 - (x1 - x0) * k / 20, y1 + b * math.sin(math.pi * k / 20)) for k in range(21)] + [(x0 - b * math.sin(math.pi * k / 20), y1 - (y1 - y0) * k / 20) for k in range(21)]
+    path(d, pts, seg(t, 0, .9), RED if t > 1.2 else INK, 10)
+    if t > 1.4:
+        for k in range(3):
+            x = CX - 120 + 120 * k; ph = (t * 1.5 + k * .33) % 1
+            path(d, [(x + 20 * math.sin((ph + j / 8) * 6), y0 - 40 - 150 * ph - j * 14) for j in range(8)], 1, RED, 7)
+    label(d, a.get('word', 'QIZIYDI'), (CX, y1 + 150), seg(t, 1.6, 2.0), RED, font(80))
+def bars(d, t, a):  # "80%" style comparison: list of [label, value]
+    items = a['items']; n = len(items); bw = 160; gap = (W - 200 - n * bw) / max(1, n - 1)
+    for i, (lab, v) in enumerate(items):
+        x = 100 + i * (bw + gap); hh = 600 * v / 100 * eo(seg(t, .3 + i * .3, 1.2 + i * .3))
+        d.rectangle([x, CY + 300 - hh, x + bw, CY + 300], fill=ACC if i == a.get('hi', n - 1) else DIM)
+        label(d, lab, (x + bw / 2, CY + 360), seg(t, .2, .6), INK, F_TAG)
+def none(d, t, a): pass
+DRAW = {k: v for k, v in globals().items() if k in ('phone', 'chip', 'gauge', 'switch', 'swell', 'bars', 'none')}
+
+# ---------- text ----------
+def text_block(d, s, t, y=420, f=F_BIG, maxw=W - 140):
+    lines = []
+    for raw in s.split('|'):
+        words, cur = raw.split(), []
+        for w_ in words:
+            test = ' '.join(cur + [w_]).replace('*', '')
+            if cur and d.textlength(test, font=f) > maxw: lines.append(cur); cur = [w_]
+            else: cur.append(w_)
+        lines.append(cur)
+    lh = f.size * 1.12; y0 = y - lh * (len(lines) - 1) / 2; k = 0
+    for li, words in enumerate(lines):
+        full = ' '.join(words).replace('*', ''); x = (W - d.textlength(full, font=f)) / 2
+        for w_ in words:
+            acc = w_.startswith('*') or w_.endswith('*'); w_ = w_.strip('*')
+            u = seg(t, .08 * k, .08 * k + .25); k += 1
+            if u > 0:
+                dy = (1 - pop(u)) * 40; col = ACC if acc else INK
+                d.text((x, y0 + li * lh + dy), w_, font=f, fill=tuple(int(BG[i] + (col[i] - BG[i]) * u) for i in range(3)), anchor='lm')
+            x += d.textlength(w_ + ' ', font=f)
+
+def background():
+    im = Image.new('RGB', (W, H), BG); d = ImageDraw.Draw(im)
+    for x in range(0, W, 60): d.line([(x, 0), (x, H)], fill=GRID, width=1 if x % 300 else 2)
+    for y in range(0, H, 60): d.line([(0, y), (W, y)], fill=GRID, width=1 if y % 300 else 2)
+    return im
+
+# ---------- music: soft pad + pluck arpeggio + whoosh at cuts ----------
+NOTE = {'C': 0, 'D': 2, 'E': 4, 'F': 5, 'G': 7, 'A': 9, 'B': 11}
+def music(dur, cuts, key='A', sr=44100):
+    n = int(dur * sr); tt = np.arange(n) / sr; out = np.zeros(n); root = 57 + NOTE[key] - 9  # A3 = 57
+    prog = [(0, 3, 7), (-4, 0, 3), (3, 7, 10), (-2, 2, 5)]  # i VI III VII
+    hz = lambda m: 440 * 2 ** ((m - 69) / 12); bar = 2.4
+    for b in range(int(dur / bar) + 1):
+        s0, s1 = int(b * bar * sr), min(n, int((b + 1) * bar * sr + .3 * sr))
+        if s0 >= n: break
+        seg_t = tt[s0:s1] - b * bar; env = np.minimum(1, seg_t / .4) * np.exp(-seg_t * .25)
+        for iv in prog[b % 4]:
+            f = hz(root + iv); out[s0:s1] += .05 * env * (np.sin(2 * np.pi * f * tt[s0:s1]) + .5 * np.sin(2 * np.pi * f * 1.003 * tt[s0:s1]) + .25 * np.sin(4 * np.pi * f * tt[s0:s1]))
+        for j in range(8):  # pluck eighths
+            ps = s0 + int(j * bar / 8 * sr); pe = min(n, ps + int(.5 * sr))
+            if ps >= n: break
+            m = root + 12 + prog[b % 4][j % 3] + (12 if j % 4 == 3 else 0); lt = tt[ps:pe] - tt[ps]
+            out[ps:pe] += .07 * np.exp(-lt * 9) * np.sin(2 * np.pi * hz(m) * lt)
+        ks = s0; ke = min(n, ks + int(.25 * sr)); lt = tt[ks:ke] - tt[ks]  # soft kick each bar half
+        for off in (0, int(bar / 2 * sr)):
+            a_, b_ = ks + off, min(n, ks + off + len(lt))
+            if a_ < n: out[a_:b_] += .25 * np.exp(-lt[:b_ - a_] * 18) * np.sin(2 * np.pi * (50 + 60 * np.exp(-lt[:b_ - a_] * 30)) * lt[:b_ - a_])
+    rng = np.random.default_rng(1)
+    for c in cuts:
+        a_ = int(max(0, c - .35) * sr); b_ = min(n, a_ + int(.5 * sr))
+        if a_ >= n: continue
+        nz = rng.standard_normal(b_ - a_); nz = np.convolve(nz, np.ones(12) / 12, 'same'); lt = np.linspace(0, 1, b_ - a_)
+        out[a_:b_] += .12 * nz * np.sin(np.pi * lt) ** 2
+    fade = np.minimum(1, np.minimum(tt / .3, (dur - tt) / 1.2)); out *= fade
+    out = np.tanh(out * 1.4) / np.tanh(1.4) * .8
+    return (out * 32767).astype(np.int16), sr
+
+# ---------- voice: one ElevenLabs take for the whole reel, split into scenes by character timestamps ----------
+VOICE = {'id': 'agoC45V78njTIxYzwmSb', 'model': 'eleven_v4', 'lang': 'uz'}  # Davronbek (Uzbek journalist), chosen by the user
+LEAD, TAIL = .3, 1.2  # silence before the first word, hold after the last
+
+def voice_take(S, cache_dir, sr=44100):
+    v = {**VOICE, **S.get('voice', {})}; says = [sc.get('say', '').strip() for sc in S['scenes']]
+    text = ' '.join(x for x in says if x); key = hashlib.sha1(json.dumps([v, says]).encode()).hexdigest()[:12]
+    mp3, meta = os.path.join(cache_dir, 'voice.mp3'), os.path.join(cache_dir, 'voice.json')
+    if not (os.path.exists(meta) and json.load(open(meta)).get('key') == key):
+        body = {'text': text, 'model_id': v['model'], **({'language_code': v['lang']} if v.get('lang') and v['model'] == 'eleven_v4' else {})}
+        rq = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{v['id']}/with-timestamps?output_format=mp3_44100_128", json.dumps(body).encode(),
+                                    {'xi-api-key': os.environ['ELEVENLABS_API_KEY'], 'Content-Type': 'application/json'})
+        r = json.load(urllib.request.urlopen(rq, timeout=300)); open(mp3, 'wb').write(base64.b64decode(r['audio_base64']))
+        json.dump({'key': key, 'text': text, 'alignment': r['alignment']}, open(meta, 'w'), ensure_ascii=False)
+    al = json.load(open(meta))['alignment']; t0 = al['character_start_times_seconds']; t1 = al['character_end_times_seconds']
+    pcm = np.frombuffer(subprocess.run(['ffmpeg', '-loglevel', 'error', '-i', mp3, '-f', 's16le', '-ac', '1', '-ar', str(sr), '-'], capture_output=True, check=True).stdout, np.int16)
+    # speech start of each scene (by character offset); scenes without "say" are kept at their own dur
+    marks, pos = [], 0
+    for x in says:
+        marks.append(t0[min(pos, len(t0) - 1)] if x else None); pos += len(x) + 1 if x else 0
+    return pcm.astype(np.float64) / 32768, marks, t1[-1]
+
+def fit_scenes(scenes, marks, end):
+    """Each scene lasts from its first word to the next scene's first word (LEAD before the first, TAIL after the last)."""
+    starts, t = [], 0.
+    for i, sc in enumerate(scenes):
+        starts.append(t)
+        nxt = next((m for m in marks[i + 1:] if m is not None), None)
+        if marks[i] is None: t += sc['dur']
+        elif nxt is None: t += end - marks[i] + TAIL + (LEAD if i == 0 else 0)
+        else: t += nxt - marks[i] + (LEAD if i == 0 else 0)
+    return np.array(starts + [t])
+
+def mix_voice(mus, vo, sr=44100):
+    """Duck the music under the voice (smoothed voice envelope drives music gain) and lay the voice on top."""
+    n = len(mus); voc = np.zeros(n); a = int(LEAD * sr); voc[a:a + len(vo)] = vo[:max(0, n - a)]
+    env = np.abs(voc); k = int(.25 * sr); env = np.convolve(env, np.ones(k) / k, 'same'); env = np.clip(env / (env.max() + 1e-9) * 3, 0, 1)
+    out = mus * (.55 - .35 * env) + voc * 1.0
+    return out / max(1., np.abs(out).max() / .95)
+
+def main(script_path, out, use_voice=True):
+    S = json.load(open(script_path)); scenes = S['scenes']; starts = np.cumsum([0] + [s['dur'] for s in scenes])
+    vo = None
+    if use_voice and any(sc.get('say') for sc in scenes):
+        vo, marks, end = voice_take(S, os.path.dirname(os.path.abspath(script_path))); starts = fit_scenes(scenes, marks, end)
+    dur = float(starts[-1]); bg = background(); wav = out.rsplit('.', 1)[0] + '.wav'
+    pcm, sr = music(dur, list(starts[1:-1]), S.get('key', 'A'))
+    if vo is not None: pcm = (mix_voice(pcm / 32767, vo, sr) * 32767).astype(np.int16)
+    with wave.open(wav, 'wb') as w_: w_.setnchannels(1); w_.setsampwidth(2); w_.setframerate(sr); w_.writeframes(pcm.tobytes())
+    ff = subprocess.Popen(['ffmpeg', '-loglevel', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-', '-i', wav,
+                           '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p', *(['-af', 'loudnorm=I=-14:TP=-1.5:LRA=11', '-ar', '44100'] if vo is not None else []), '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', out], stdin=subprocess.PIPE)
+    for fi in range(int(dur * FPS)):
+        t = fi / FPS; si = int(np.searchsorted(starts, t, 'right') - 1); sc = scenes[si]; lt = t - starts[si]
+        im = bg.copy(); d = ImageDraw.Draw(im)
+        d.rectangle([0, 0, W * t / dur, 10], fill=ACC)  # progress bar
+        label(d, S.get('tag', 'QANDAY ISHLAYDI?'), (W // 2, 120), 1, DIM, F_TAG)
+        text_block(d, sc['text'], lt, y=sc.get('y', 400))
+        if sc.get('small'): label(d, sc['small'], (W // 2, sc.get('small_y', sc.get('y', 400) + 210)), seg(lt, .6, 1.0), DIM, F_SMALL)
+        DRAW[sc.get('draw', 'none')](d, lt, sc.get('args', {}))
+        ff.stdin.write(im.tobytes())
+    ff.stdin.close(); ff.wait()
+    if S.get('cover') is not None:
+        subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-ss', str(S['cover']), '-i', out, '-frames:v', '1', '-q:v', '2', out.rsplit('.', 1)[0] + '-cover.jpg'])
+    print(out, round(dur, 2), 's')
+
+if __name__ == '__main__': main(*sys.argv[1:3], use_voice='--no-voice' not in sys.argv)

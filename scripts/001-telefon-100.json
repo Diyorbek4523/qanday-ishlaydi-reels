@@ -1,0 +1,87 @@
+{
+ "title": "Telefon 100% da nega to'xtaydi?",
+ "key": "A",
+ "cover": 1.6,
+ "scenes": [
+  {
+   "dur": 3.2,
+   "text": "TELEFON *100%* DA|NEGA ZARYAD|OLMAY QO'YADI?",
+   "y": 420,
+   "draw": "phone",
+   "args": {
+    "level": [
+     62,
+     100
+    ],
+    "fill_t": 2.6,
+    "plug": true
+   },
+   "say": "Telefon yuz foizga yetganda nega zaryad olmay qo'yadi?"
+  },
+  {
+   "dur": 3.6,
+   "text": "BATAREYA ICHIDA|KICHIK *QO'RIQCHI*|CHIP BOR",
+   "draw": "chip",
+   "args": {
+    "name": "BMS",
+    "eye": "Battery Management System"
+   },
+   "say": "Batareya ichida kichkina qo'riqchi chip bor."
+  },
+  {
+   "dur": 3.8,
+   "text": "U KUCHLANISHNI|*HAR SONIYA*|O'LCHAB TURADI",
+   "draw": "gauge",
+   "args": {
+    "from": 3.6,
+    "to": 4.05,
+    "mark": 4.2,
+    "move_t": 2.3
+   },
+   "say": "U kuchlanishni har soniyada o'lchab turadi."
+  },
+  {
+   "dur": 3.8,
+   "text": "*4.2* VOLTGA|YETGANDA TOKNI|UZIB QO'YADI",
+   "draw": "switch",
+   "args": {
+    "open_t": 1.8
+   },
+   "say": "To'rt butun o'ndan ikki voltga yetganda, tokni uzib qo'yadi."
+  },
+  {
+   "dur": 3.8,
+   "text": "UZMASA BATAREYA|*QIZIYDI* VA|SHISHIB KETADI",
+   "draw": "swell",
+   "say": "Agar uzmasa, batareya qiziydi va shishib ketadi."
+  },
+  {
+   "dur": 3.6,
+   "text": "SHUNING UCHUN|*100%* = \"BAS\"|DEGAN SIGNAL",
+   "draw": "phone",
+   "args": {
+    "level": [
+     100,
+     100
+    ],
+    "plug": true,
+    "bolt": false
+   },
+   "say": "Shuning uchun yuz foiz, bu \"bas\" degan signal."
+  },
+  {
+   "dur": 3.2,
+   "text": "*SAQLAB* QO'YING|KEYINGISI:|ESKALATOR QAYERGA YO'QOLADI?",
+   "small": "@qanday_ishlaydi.uz",
+   "y": 760,
+   "small_y": 1060,
+   "draw": "none",
+   "say": "Saqlab qo'ying! Keyingi videoda: eskalator zinalari qayerga yo'qoladi?"
+  }
+ ],
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz"
+ }
+}
