@@ -18,3 +18,7 @@
 - [ ] TISH IMPLANTI qanday o'rnashadi? (titan vint suyak bilan bitib ketadi)
 - [ ] Mashina MOYI nega almashtiriladi? (ishqalanish, moy eskiradi)
 - [ ] INDUKSION plita nega qo'lni kuydirmaydi? (magnit maydon idishni o'zini isitadi)
+- [ ] Samolyotda TELEFONNI nega "parvoz rejimi"ga qo'yish so'raladi? (radio shovqin ehtiyoti, aniq qoida)
+- [ ] Plastik KARTA bilan to'lov 2 soniyada qanday o'tadi? (terminal -> protsessing -> bank, chip)
+- [ ] GAZ plitadagi olov nega KO'K, gulxan esa sariq? (to'liq yonish vs qurum zarralari)
+- [ ] METRO poyezdi tokni qayerdan oladi? (uchinchi relsdan kontakt)
