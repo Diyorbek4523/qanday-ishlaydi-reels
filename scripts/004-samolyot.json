@@ -1,0 +1,15 @@
+{
+ "title": "Samolyot nega qulamaydi?",
+ "key": "E",
+ "cover": 1.8,
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz"},
+ "scenes": [
+  {"dur": 3.4, "text": "YUZLAB TONNALIK|SAMOLYOT NEGA|*QULAMAYDI*?", "y": 420, "draw": "wing", "args": {"lift": true}, "say": "Yuzlab tonnalik samolyot havoda qanday qilib qulamay turadi?"},
+  {"dur": 3.4, "text": "BUTUN SIR|*QANOTDA*", "draw": "wing", "args": {"flow": false, "aoa": 8}, "say": "Butun sir qanotning shaklida."},
+  {"dur": 3.4, "text": "QANOT HAVONI|*PASTGA*|BURADI", "draw": "wing", "args": {"down": 150, "word": "PASTGA"}, "say": "Qanot o'tayotgan havoni pastga buradi."},
+  {"dur": 3.4, "text": "USTIDA BOSIM|*PASAYADI*", "draw": "wing", "args": {"press": true}, "say": "Natijada qanot ustida bosim pasayadi, ostida esa ko'proq bo'ladi."},
+  {"dur": 3.2, "text": "BU FARQ|QANOTNI|*KO'TARADI*", "draw": "wing", "args": {"lift": true}, "say": "Mana shu bosim farqi qanotni yuqoriga ko'taradi."},
+  {"dur": 3.8, "text": "SHART:|*TEZLIK*", "draw": "wing", "args": {"speed": 560, "word": "250-300 KM/SOAT"}, "say": "Lekin tezlik kerak: katta samolyot soatiga ikki yuz ellik, uch yuz kilometrda yerdan uziladi."},
+  {"dur": 3.2, "text": "*SAQLAB* QO'YING|KEYINGISI:|QUYOSH PANELI QANDAY|TOK BERADI?", "small": "@qanday_ishlaydi.uz", "y": 760, "small_y": 1100, "draw": "none", "say": "Saqlab qo'ying! Keyingi videoda: quyosh paneli qanday qilib tok beradi?"}
+ ]
+}

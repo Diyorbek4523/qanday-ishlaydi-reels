@@ -1,0 +1,15 @@
+{
+ "title": "Quyosh paneli qanday tok beradi?",
+ "key": "G",
+ "cover": 1.8,
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz"},
+ "scenes": [
+  {"dur": 3.4, "text": "QUYOSH PANELI|QANDAY QILIB|*TOK* BERADI?", "y": 420, "draw": "solar", "args": {"flow": true}, "say": "Quyosh paneli qanday qilib tok beradi?"},
+  {"dur": 3.2, "text": "PANEL YUPQA|*KREMNIY*|PLASTINALARDAN", "draw": "solar", "args": {"wire": false}, "say": "Panel yupqa kremniy plastinalardan yig'ilgan."},
+  {"dur": 3.2, "text": "HAR BIRIDA|IKKI QAVAT:|*N* VA *P*", "draw": "solar", "args": {"cell": true, "elec": false, "photons": false, "wire": false}, "say": "Har bir plastina ikki qatlamdan iborat: N va P qatlam."},
+  {"dur": 3.4, "text": "NUR *ELEKTRONNI*|JOYIDAN|URIB CHIQARADI", "draw": "solar", "args": {"cell": true, "wire": false}, "say": "Quyosh nuri kremniyga tegib, elektronlarni joyidan urib chiqaradi."},
+  {"dur": 3.8, "text": "ELEKTRONLAR|*BIR TOMONGA*|OQADI = TOK", "draw": "solar", "args": {"cell": true, "flow": true}, "say": "Qatlamlar orasidagi maydon ularni bir tomonga haydaydi. Mana shu elektr toki."},
+  {"dur": 3.8, "text": "*INVERTOR*|TOKNI UYGA|MOSLAYDI", "draw": "solar", "args": {"inv": true, "flow": true, "word": "220 V"}, "say": "Panel o'zgarmas tok beradi. Invertor esa uni uydagi ikki yuz yigirma voltli o'zgaruvchan tokka aylantiradi."},
+  {"dur": 3.2, "text": "*SAQLAB* QO'YING|KEYINGISI:|KONDITSIONER QANDAY|SOVUTADI?", "small": "@qanday_ishlaydi.uz", "y": 760, "small_y": 1100, "draw": "none", "say": "Saqlab qo'ying! Keyingi videoda: konditsioner qanday sovutadi?"}
+ ]
+}

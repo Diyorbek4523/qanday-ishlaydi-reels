@@ -1,0 +1,15 @@
+{
+ "title": "Konditsioner qanday sovutadi?",
+ "key": "C",
+ "cover": 1.8,
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz"},
+ "scenes": [
+  {"dur": 3.4, "text": "KONDITSIONER|SOVUQNI QAYERDAN|*OLADI*?", "y": 420, "draw": "heatpump", "args": {"heat_in": true, "heat_out": true}, "say": "Konditsioner sovuqni qayerdan oladi?"},
+  {"dur": 3.0, "text": "U SOVUQ|*YARATMAYDI*", "draw": "heatpump", "args": {}, "say": "Aslida u sovuq yaratmaydi."},
+  {"dur": 3.6, "text": "XONADAGI|*ISSIQLIKNI*|YUTIB OLADI", "draw": "heatpump", "args": {"heat_in": true}, "say": "Ichki blokdagi sovuq freon xonadagi havoning issiqligini o'ziga yutib oladi."},
+  {"dur": 3.4, "text": "*KOMPRESSOR*|GAZNI SIQIB|QIZDIRADI", "draw": "heatpump", "args": {"hl": "comp", "word": "ISIYDI", "word_col": "red"}, "say": "Tashqi blokdagi kompressor bu gazni siqadi va u qizib ketadi."},
+  {"dur": 3.6, "text": "ISSIQLIK|*TASHQARIGA*|CHIQARILADI", "draw": "heatpump", "args": {"heat_out": true}, "say": "Tashqi blok shu issiqlikni ko'chaga chiqarib yuboradi. Shuning uchun undan issiq havo esadi."},
+  {"dur": 3.8, "text": "KLAPANDAN O'TIB|FREON YANA|*SOVIYDI*", "draw": "heatpump", "args": {"hl": "valve"}, "say": "Keyin freon tor klapandan o'tadi, bosimi tushib, yana sovib ketadi. Aylanish qaytadan boshlanadi."},
+  {"dur": 3.2, "text": "*SAQLAB* QO'YING|KEYINGISI:|TANDIRGA NON NEGA|YOPISHADI?", "small": "@qanday_ishlaydi.uz", "y": 760, "small_y": 1100, "draw": "none", "say": "Saqlab qo'ying! Keyingi videoda: tandirga non nega yopishadi?"}
+ ]
+}
