@@ -1,0 +1,16 @@
+{
+ "title": "Tandirga non nega yopishadi?",
+ "style": "3d",
+ "scene": "tandir",
+ "key": "D",
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz", "settings": {"stability": 0.0, "similarity_boost": 0.8}},
+ "scenes": [
+  {"dur": 3.4, "text": "TANDIRDAGI NON|NEGA *TUSHIB*|KETMAYDI?", "say": "[curious] Tandirga yopilgan non nega yerga tushib ketmaydi?"},
+  {"dur": 3.0, "say": "[whispers] Hech o'ylab ko'rganmisiz? [excited] Butun sir tandirning o'zida!"},
+  {"dur": 3.6, "say": "Avval ichida olov yoqiladi va loy devorlar qattiq qiziydi."},
+  {"dur": 3.6, "say": "Novvoy xamirni yostiqchaga qo'yib, issiq devorga shap etib uradi."},
+  {"dur": 4.0, "say": "Ho'l, yopishqoq xamir g'adir-budur loyga yopishadi, orqasi esa issiqdan bir zumda qotib qoladi."},
+  {"dur": 4.0, "say": "Qizigan devor issiqlikni har tomondan taratadi. [excited] Shuning uchun non tez va bir tekis pishadi!"},
+  {"dur": 3.2, "text": "*SAQLAB* QO'YING|KEYINGISI:|MUZLATKICH SOVUQNI|QAYERDAN OLADI?", "say": "[excited] Saqlab qo'ying! Keyingi videoda: muzlatkich sovuqni qayerdan oladi?"}
+ ]
+}

@@ -362,7 +362,7 @@ def music(dur, cuts, key='A', sr=44100):
     return (out * 32767).astype(np.int16), sr
 
 # ---------- voice: one ElevenLabs take for the whole reel, split into scenes by character timestamps ----------
-VOICE = {'id': 'agoC45V78njTIxYzwmSb', 'model': 'eleven_v4', 'lang': 'uz'}  # Davronbek (Uzbek journalist), chosen by the user
+VOICE = {'id': 'agoC45V78njTIxYzwmSb', 'model': 'eleven_v4', 'lang': 'uz', 'settings': {'stability': 0.0, 'similarity_boost': 0.8}}  # Davronbek (Uzbek journalist); stability 0 + [tags] = the lively read the user picked (2026-11-01)
 LEAD, TAIL = .3, 1.2  # silence before the first word, hold after the last
 
 def voice_take(S, cache, sr=44100):
@@ -370,7 +370,8 @@ def voice_take(S, cache, sr=44100):
     text = ' '.join(x for x in says if x); key = hashlib.sha1(json.dumps([v, says]).encode()).hexdigest()[:12]
     mp3, meta = cache + '.voice.mp3', cache + '.voice.json'
     if not (os.path.exists(meta) and json.load(open(meta)).get('key') == key):
-        body = {'text': text, 'model_id': v['model'], **({'language_code': v['lang']} if v.get('lang') and v['model'] == 'eleven_v4' else {})}
+        body = {'text': text, 'model_id': v['model'], **({'language_code': v['lang']} if v.get('lang') and v['model'] == 'eleven_v4' else {}),
+                **({'voice_settings': v['settings']} if v.get('settings') else {})}  # e.g. {"stability": 0, "similarity_boost": .8} for a livelier read; [tags] in say steer emotion
         rq = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{v['id']}/with-timestamps?output_format=mp3_44100_128", json.dumps(body).encode(),
                                     {'xi-api-key': os.environ['ELEVENLABS_API_KEY'], 'Content-Type': 'application/json'})
         r = json.load(urllib.request.urlopen(rq, timeout=300)); open(mp3, 'wb').write(base64.b64decode(r['audio_base64']))

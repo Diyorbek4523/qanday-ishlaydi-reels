@@ -6,7 +6,7 @@
 - [x] 004 SAMOLYOT nega qulamaydi? (qanot havoni pastga buradi, bosim farqi, tezlik)
 - [x] 005 QUYOSH PANELI qanday tok beradi? (kremniy N/P, invertor 220 V)
 - [x] 006 KONDITSIONER qanday sovutadi? (freon, kompressor, klapan)
-- [ ] TANDIR devoriga non nega yopishadi va pishadi? (issiq loy devor, nurlanish)
+- [x] 007 TANDIR devoriga non nega yopishadi va pishadi? (3D: issiq loy devor, nurlanish)
 - [ ] MUZLATKICH sovuqni qayerdan oladi? (sovuq yaratmaydi, issiqlikni tashqariga chiqaradi; heatpump chizmasi, left/right nomlari bilan)
 - [ ] SVETOFOR mashinani qanday sezadi? (yo'l ostidagi induktiv halqa)
 - [ ] QULF kalitni qanday taniydi? (pin tumbler, pinlar bir chiziqqa tushadi)
