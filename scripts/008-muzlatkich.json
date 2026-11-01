@@ -1,0 +1,16 @@
+{
+ "title": "Muzlatkich sovuqni qayerdan oladi?",
+ "style": "3d",
+ "scene": "muzlatkich",
+ "key": "E",
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz", "settings": {"stability": 0.0, "similarity_boost": 0.8}},
+ "scenes": [
+  {"dur": 3.2, "text": "MUZLATKICH|SOVUQNI *QAYERDAN*|OLADI?", "say": "[curious] Muzlatkich sovuqni qayerdan oladi?"},
+  {"dur": 3.0, "say": "[whispers] Javob sizni hayron qoldiradi. [surprised] Hech qayerdan!"},
+  {"dur": 3.8, "say": "Muzlatkich sovuq yaratmaydi, u ichkaridagi issiqlikni tashqariga tashiydi."},
+  {"dur": 4.0, "say": "Ichkaridagi quvurlarda maxsus suyuqlik bug'lanib, mahsulotlarning issiqligini yutib oladi."},
+  {"dur": 3.4, "say": "Pastdagi kompressor bu bug'ni siqadi va u qattiq qiziydi."},
+  {"dur": 4.2, "say": "Orqadagi panjara issiqlikni xonaga chiqaradi. [excited] Shuning uchun muzlatkichning orqasi doim iliq!"},
+  {"dur": 3.2, "text": "*SAQLAB* QO'YING|KEYINGISI:|QULF KALITNI|QANDAY TANIYDI?", "say": "[excited] Saqlab qo'ying! Keyingi videoda: qulf kalitni qanday taniydi?"}
+ ]
+}

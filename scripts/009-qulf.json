@@ -1,0 +1,16 @@
+{
+ "title": "Qulf kalitni qanday taniydi?",
+ "style": "3d",
+ "scene": "qulf",
+ "key": "C",
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz", "settings": {"stability": 0.0, "similarity_boost": 0.8}},
+ "scenes": [
+  {"dur": 3.2, "text": "QULF AYNAN|SIZNING KALITNI|QANDAY *TANIYDI*?", "say": "[curious] Qulf aynan sizning kalitingizni qanday taniydi?"},
+  {"dur": 3.4, "say": "[whispers] Uning ichida beshta kichik ustuncha yashiringan."},
+  {"dur": 4.2, "say": "Har ustuncha ikki bo'lak. Prujina ularni pastga bosib, silindrni qulflab turadi."},
+  {"dur": 3.8, "say": "Begona kalit ustunchalarni noto'g'ri ko'taradi va silindr qimirlamaydi."},
+  {"dur": 4.0, "say": "To'g'ri kalit esa har birini aynan kerakli balandlikka ko'taradi, uzilishlar bitta chiziqqa tushadi."},
+  {"dur": 2.8, "say": "[excited] Shunda silindr bemalol buriladi va qulf ochiladi!"},
+  {"dur": 3.4, "text": "*SAQLAB* QO'YING|KEYINGISI:|SVETOFOR MASHINANI|QANDAY SEZADI?", "say": "[excited] Saqlab qo'ying! Keyingi videoda: svetofor mashinani qanday sezadi?"}
+ ]
+}
