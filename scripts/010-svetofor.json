@@ -1,0 +1,17 @@
+{
+ "title": "Svetofor mashinani qanday sezadi?",
+ "style": "3d",
+ "scene": "svetofor",
+ "key": "G",
+ "exp": {"uzunlik": "uzun"},
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz", "settings": {"stability": 0.0, "similarity_boost": 0.8}},
+ "scenes": [
+  {"dur": 3.2, "text": "SVETOFOR|MASHINANI QANDAY|*SEZADI*?", "say": "[curious] Ba'zi svetoforlar mashina kelganini qanday sezadi?"},
+  {"dur": 3.4, "say": "[whispers] Sir asfalt tagida: yo'lga ko'milgan sim halqa."},
+  {"dur": 4.2, "say": "Halqadan tok o'tadi va uning ustida ko'rinmas magnit maydon hosil bo'ladi."},
+  {"dur": 4.0, "say": "Mashina tepasiga kelganda, metall kuzov shu maydonni o'zgartiradi."},
+  {"dur": 4.0, "say": "Qurilma buni darhol sezadi va boshqaruv qutisiga xabar beradi."},
+  {"dur": 3.0, "say": "[excited] Navbat kelganda esa, sizga yashil chiroq yonadi!"},
+  {"dur": 3.4, "text": "*SAQLAB* QO'YING|KEYINGISI:|TERMOS NEGA|SOVUMAYDI?", "say": "[excited] Saqlab qo'ying! Keyingi videoda: termos choyni qanday issiq saqlaydi?"}
+ ]
+}

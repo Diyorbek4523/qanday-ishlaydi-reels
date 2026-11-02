@@ -1,0 +1,17 @@
+{
+ "title": "Telefon qishda nega tez o'chib qoladi?",
+ "style": "3d",
+ "scene": "telefon_qish",
+ "key": "E",
+ "exp": {"uzunlik": "uzun"},
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz", "settings": {"stability": 0.0, "similarity_boost": 0.8}},
+ "scenes": [
+  {"dur": 3.2, "text": "TELEFON QISHDA|NEGA TEZ|*O'CHADI*?", "say": "[curious] Telefon qishda nega tez o'chib qoladi?"},
+  {"dur": 3.4, "say": "[whispers] Batareya ichida zaryadni mayda ionlar tashiydi."},
+  {"dur": 3.8, "say": "Ular suyuqlik ichida bir qatlamdan ikkinchisiga suzib o'tadi."},
+  {"dur": 3.6, "say": "Sovuqda esa suyuqlik quyuqlashadi va ionlar sekinlashib qoladi."},
+  {"dur": 4.6, "say": "Batareya kerakli tokni bera olmaydi, kuchlanish tushadi va telefon o'chadi, zaryad bor bo'lsa ham."},
+  {"dur": 3.2, "say": "[surprised] Lekin zaryad yo'qolmagan! Telefon isisa, foizlar ko'pincha qaytadi."},
+  {"dur": 3.4, "text": "*SAQLAB* QO'YING|KEYINGISI:|EKRAN BARMOQNI|QANDAY SEZADI?", "say": "[excited] Saqlab qo'ying! Keyingi videoda: ekran barmoqni qanday sezadi?"}
+ ]
+}

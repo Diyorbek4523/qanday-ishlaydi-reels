@@ -1,0 +1,15 @@
+{
+ "title": "Termos choyni qanday issiq saqlaydi?",
+ "style": "3d",
+ "scene": "termos",
+ "key": "A",
+ "exp": {"uzunlik": "qisqa"},
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz", "settings": {"stability": 0.0, "similarity_boost": 0.8}},
+ "scenes": [
+  {"dur": 3.0, "text": "TERMOS CHOYNI|QANDAY ISSIQ|*SAQLAYDI*?", "say": "[curious] Termos choyni qanday issiq saqlaydi?"},
+  {"dur": 4.0, "say": "[whispers] Uning devori ikki qavat, orasida esa hatto havo ham yo'q."},
+  {"dur": 4.0, "say": "Bo'shliqda issiqlikni uzatadigan zarralar yo'q, shuning uchun u o'ta olmaydi."},
+  {"dur": 4.0, "say": "[excited] Yaltiroq devor esa nur bo'lib qochayotgan issiqlikni ortga qaytaradi!"},
+  {"dur": 3.4, "text": "*SAQLAB* QO'YING|KEYINGISI:|TELEFON QISHDA|NEGA O'CHADI?", "say": "[excited] Saqlab qo'ying! Keyingi videoda: telefon qishda nega tez o'chadi?"}
+ ]
+}
