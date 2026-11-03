@@ -1,0 +1,15 @@
+{
+ "title": "Ekran barmoqni qanday sezadi?",
+ "style": "3d",
+ "scene": "ekran",
+ "key": "D",
+ "exp": {"uzunlik": "qisqa"},
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz", "settings": {"stability": 0.0, "similarity_boost": 0.8}},
+ "scenes": [
+  {"dur": 3.0, "text": "EKRAN BARMOQNI|QANDAY|*SEZADI*?", "say": "[curious] Telefon ekrani barmog'ingizni qanday sezadi?"},
+  {"dur": 4.5, "say": "[whispers] Shisha ostida ko'rinmas simlar to'ri bor, unda kuchsiz elektr maydoni turadi."},
+  {"dur": 4.5, "say": "Barmoq tok o'tkazadi: tekkan joyda maydon o'zgaradi, telefon shu nuqtani topadi."},
+  {"dur": 3.0, "say": "[surprised] Shuning uchun qalin qo'lqopda ekran sizni sezmaydi!"},
+  {"dur": 3.4, "text": "*SAQLAB* QO'YING|KEYINGISI:|CHANGYUTGICH|CHANGNI QANDAY|TORTADI?", "say": "[excited] Saqlab qo'ying! Keyingisi: changyutgich changni qanday tortadi?"}
+ ]
+}

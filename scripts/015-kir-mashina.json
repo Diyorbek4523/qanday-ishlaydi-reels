@@ -1,0 +1,17 @@
+{
+ "title": "Kir mashina kirni qanday quritadi?",
+ "style": "3d",
+ "scene": "kir_mashina",
+ "key": "C",
+ "exp": {"uzunlik": "uzun"},
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz", "settings": {"stability": 0.0, "similarity_boost": 0.8}},
+ "scenes": [
+  {"dur": 3.0, "text": "KIR MASHINA|KIRNI QANDAY|*QURITADI*?", "say": "[curious] Kir mashina kirni qanday quritadi?"},
+  {"dur": 3.5, "say": "[whispers] Ichida siquvchi qo'l ham, valik ham yo'q. Faqat teshikli baraban bor."},
+  {"dur": 3.5, "say": "Siqish boshlanganda baraban daqiqasiga taxminan ming marta aylanadi."},
+  {"dur": 4.5, "say": "Kir to'g'ri uchib ketmoqchi bo'ladi, lekin baraban devori uni ushlab turadi."},
+  {"dur": 3.5, "say": "Suvni esa hech narsa ushlamaydi: u teshiklardan otilib chiqadi."},
+  {"dur": 4.0, "say": "[surprised] Tashqi bakka tushgan suvni nasos quvur orqali chiqarib yuboradi!"},
+  {"dur": 3.4, "text": "*SAQLAB* QO'YING|KEYINGISI:|KIR MASHINADA|PUL NEGA|ERIMAYDI?", "say": "[excited] Saqlab qo'ying! Keyingi videoda: kir mashinada pul nega erimaydi?"}
+ ]
+}

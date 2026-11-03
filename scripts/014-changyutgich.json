@@ -1,0 +1,15 @@
+{
+ "title": "Changyutgich changni qanday tortadi?",
+ "style": "3d",
+ "scene": "changyutgich",
+ "key": "G",
+ "exp": {"uzunlik": "qisqa"},
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz", "settings": {"stability": 0.0, "similarity_boost": 0.8}},
+ "scenes": [
+  {"dur": 3.0, "text": "CHANGYUTGICH|CHANGNI QANDAY|*TORTADI*?", "say": "[curious] Changyutgich changni qanday tortadi?"},
+  {"dur": 4.0, "say": "[whispers] Aslida u tortmaydi! Ichidagi parrak havoni tashqariga haydaydi."},
+  {"dur": 4.0, "say": "Ichkarida bosim pasayadi va tashqi havo o'zi itarilib kiradi."},
+  {"dur": 4.5, "say": "[excited] Oqim changni olib kiradi, filtr uni ushlab qoladi, toza havo chiqib ketadi!"},
+  {"dur": 3.4, "text": "*SAQLAB* QO'YING|KEYINGISI:|KIR MASHINA|KIRNI QANDAY|QURITADI?", "say": "[excited] Saqlab qo'ying! Keyingisi: kir mashina kirni qanday quritadi?"}
+ ]
+}
