@@ -23,7 +23,7 @@ Blender: `C:\Program Files (x86)\Steam\steamapps\common\Blender\blender.exe` (5.
 - `say`: tabiiy og'zaki o'zbekcha, raqamlar so'z bilan. ElevenLabs v4 teglari ingliz tilida, kvadrat qavsda, gap boshida:
   `[curious]` savol, `[whispers]` sir/qiziqtirish, `[excited]` ochilish va oxirgi chaqiriq, `[surprised]`, `[laughs]` kamdan-kam.
   Har sahnada ko'pi bilan 1-2 teg. Teglar subtitrga chiqmaydi.
-- 1-sahna `text`: tepada katta hook (`|` qator, `*so'z*` sariq). Oxirgi sahna `text`: `*SAQLAB* QO'YING|KEYINGISI:|...`.
+- 1-sahna `text`: tepada katta hook (`|` qator, `*so'z*` sariq). Oxirgi sahna `text`: `*OBUNA* BO'LING|KEYINGISI:|...`, `say`: `[excited] Obuna bo'ling! Keyingi videoda: ...` (2026-11-04: maqsad obunachi, 9492 ko'rishga 20 obunachi edi).
 - Ovoz sozlamasi standart (`reel.VOICE`): stability 0.0, similarity 0.8 — foydalanuvchi tanlagan jonli variant.
 
 ## Sahna skripti qoidalari
