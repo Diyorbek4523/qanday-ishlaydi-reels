@@ -1,0 +1,15 @@
+{
+ "title": "Kir mashinada pul nega erimaydi?",
+ "style": "3d",
+ "scene": "pul",
+ "key": "D",
+ "exp": {"uzunlik": "qisqa"},
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz", "settings": {"stability": 0.0, "similarity_boost": 0.8}},
+ "scenes": [
+  {"dur": 3.0, "text": "KIR MASHINADA|PUL NEGA|*ERIMAYDI*?", "say": "[curious] Kir mashinada pul nega erimaydi?"},
+  {"dur": 3.8, "say": "[whispers] Oddiy qog'oz suvda tezda bo'shashadi: uning tolalari qisqa."},
+  {"dur": 4.2, "say": "Pul esa ko'pincha paxtadan qilinadi. Dollarning to'rtdan uch qismi paxta!"},
+  {"dur": 4.2, "say": "[excited] Uzun tolalar bir-biriga chigallashib, suvda ham mahkam ushlab turadi!"},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|ZAJIGALKADA UCHQUN|QAYERDAN CHIQADI?", "say": "[excited] Obuna bo'ling! Keyingi videoda: zajigalkada uchqun qayerdan chiqadi?"}
+ ]
+}

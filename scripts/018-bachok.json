@@ -1,0 +1,17 @@
+{
+ "title": "Bachok suv to'lganini qanday biladi?",
+ "style": "3d",
+ "scene": "bachok",
+ "key": "E",
+ "exp": {"uzunlik": "uzun"},
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz", "settings": {"stability": 0.0, "similarity_boost": 0.8}},
+ "scenes": [
+  {"dur": 3.2, "text": "BACHOK SUV|TO'LGANINI QANDAY|*BILADI*?", "say": "[curious] Unitaz bachogi suv to'lganini qanday biladi?"},
+  {"dur": 3.6, "say": "[whispers] Ichida elektronika yo'q. Bor-yo'g'i suvda suzuvchi qalqovuch."},
+  {"dur": 3.8, "say": "Tugmani bossangiz, pastdagi qopqoq ochiladi va suv unitazga tushib ketadi."},
+  {"dur": 4.0, "say": "Suv pasayadi, qalqovuch ham tushadi va richag jo'mrakni ochadi."},
+  {"dur": 3.6, "say": "Yangi suv kiradi. Sath ko'tarilgan sari qalqovuch ham ko'tariladi."},
+  {"dur": 3.6, "say": "[surprised] Yetarli balandlikda richag jo'mrakni yopadi. Suv o'zi to'xtaydi!"},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|MOLNIYA TISHLARNI|QANDAY ULAYDI?", "say": "[excited] Obuna bo'ling! Keyingi videoda: molniya tishlarni qanday ulaydi?"}
+ ]
+}

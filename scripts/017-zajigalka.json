@@ -1,0 +1,17 @@
+{
+ "title": "Zajigalkada uchqun qayerdan chiqadi?",
+ "style": "3d",
+ "scene": "zajigalka",
+ "key": "A",
+ "exp": {"uzunlik": "uzun"},
+ "voice": {"id": "agoC45V78njTIxYzwmSb", "model": "eleven_v4", "lang": "uz", "settings": {"stability": 0.0, "similarity_boost": 0.8}},
+ "scenes": [
+  {"dur": 3.2, "text": "ZAJIGALKADA|UCHQUN QAYERDAN|*CHIQADI*?", "say": "[curious] Zajigalkada uchqun qayerdan chiqadi?"},
+  {"dur": 3.4, "say": "[whispers] Tugmali zajigalkada batareya yo'q. Faqat kichkina kristall bor."},
+  {"dur": 4.2, "say": "Tugmani bossangiz prujina siqiladi, keyin bolg'acha kristallga keskin uriladi."},
+  {"dur": 3.8, "say": "[surprised] Zarbadan kristall elektr hosil qiladi: bir necha ming volt!"},
+  {"dur": 3.8, "say": "Tok sim bo'ylab yuqoriga boradi va havodan sakrab o'tadi: mana o'sha uchqun."},
+  {"dur": 3.4, "say": "[excited] Shu payt klapan ochilib gaz chiqadi, uchqun uni yoqadi!"},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|BACHOK SUV|TO'LGANINI QANDAY|BILADI?", "say": "[excited] Obuna bo'ling! Keyingi videoda: bachok suv to'lganini qanday biladi?"}
+ ]
+}
