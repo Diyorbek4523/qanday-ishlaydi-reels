@@ -1,0 +1,43 @@
+{
+ "title": "Molniya tishlarni qanday ulaydi?",
+ "style": "3d",
+ "scene": "molniya",
+ "key": "D",
+ "exp": {
+  "uzunlik": "qisqa"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.0,
+   "text": "MOLNIYA TISHLARNI|QANDAY|*ULAYDI*?",
+   "say": "[curious] Molniya tishlarni qanday ulaydi?"
+  },
+  {
+   "dur": 4.0,
+   "say": "[whispers] Hammasi surgichda. Ichida Y harfidek yo'lak bor."
+  },
+  {
+   "dur": 4.0,
+   "say": "Yo'lak ikki qator tishni qiyalatib, navbatma-navbat yaqinlashtiradi."
+  },
+  {
+   "dur": 4.5,
+   "say": "[surprised] Har tishdagi do'ngcha qo'shni chuqurchaga kirib ilinadi!"
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|CHOYNAK O'ZI|QANDAY O'CHADI?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: choynak o'zi qanday o'chadi?"
+  }
+ ]
+}

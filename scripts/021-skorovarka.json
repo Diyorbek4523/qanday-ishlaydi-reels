@@ -1,0 +1,51 @@
+{
+ "title": "Skorovarka nega tez pishiradi?",
+ "style": "3d",
+ "scene": "skorovarka",
+ "key": "C",
+ "exp": {
+  "uzunlik": "uzun"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.2,
+   "text": "SKOROVARKA|NEGA TEZ|*PISHIRADI*?",
+   "say": "[curious] Skorovarkada go'sht nega shuncha tez pishadi?"
+  },
+  {
+   "dur": 3.6,
+   "say": "[whispers] Oddiy qozonda suv yuz darajadan oshmaydi."
+  },
+  {
+   "dur": 3.6,
+   "say": "Skorovarka qopqog'i rezina halqa bilan zich yopiladi. Bug' chiqolmaydi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Bug' yig'ilgan sari ichkarida bosim oshadi."
+  },
+  {
+   "dur": 4.0,
+   "say": "[surprised] Endi suv taxminan yuz yigirma darajada qaynaydi! Go'sht tez pishadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Ortiqcha bug'ni klapan chiqarib turadi. Shuning uchun xavfsiz."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|GAZ OLOVI|NEGA KO'K?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: gaz olovi nega ko'k?"
+  }
+ ]
+}

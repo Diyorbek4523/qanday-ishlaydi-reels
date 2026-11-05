@@ -1,0 +1,43 @@
+{
+ "title": "Choynak qaynaganda o'zi qanday o'chadi?",
+ "style": "3d",
+ "scene": "choynak",
+ "key": "F",
+ "exp": {
+  "uzunlik": "qisqa"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.0,
+   "text": "CHOYNAK O'ZI|QANDAY|*O'CHADI*?",
+   "say": "[curious] Choynak qaynaganda o'zi qanday o'chadi?"
+  },
+  {
+   "dur": 4.0,
+   "say": "[whispers] Oddiy choynakda chip yo'q. Faqat yupqa metall disk bor."
+  },
+  {
+   "dur": 4.0,
+   "say": "Suv qaynasa, bug' ingichka yo'lakdan shu diskka boradi."
+  },
+  {
+   "dur": 4.5,
+   "say": "[surprised] Disk qizib, chirt etib egiladi va tokni uzadi!"
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|SKOROVARKA NEGA|TEZ PISHIRADI?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: skorovarka nega tez pishiradi?"
+  }
+ ]
+}
