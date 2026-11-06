@@ -1,0 +1,51 @@
+{
+ "title": "Domofon kaliti eshikni qanday ochadi?",
+ "style": "3d",
+ "scene": "domofon",
+ "key": "B",
+ "exp": {
+  "uzunlik": "uzun"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.0,
+   "text": "DOMOFON KALITI|QANDAY|*OCHADI*?",
+   "say": "[curious] Domofon kaliti eshikni qanday ochadi?"
+  },
+  {
+   "dur": 3.0,
+   "say": "[whispers] Bu kichik brelokda batareya yo'q."
+  },
+  {
+   "dur": 3.0,
+   "say": "Ichida mis g'altak va kichkina chip bor."
+  },
+  {
+   "dur": 4.0,
+   "say": "Kalitni yaqinlashtirsangiz, panel maydoni chipni yoqadi. Chip o'z raqamini yuboradi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Eshikni esa tepadagi magnit yuzlab kilo kuch bilan ushlab turadi."
+  },
+  {
+   "dur": 3.6,
+   "say": "[surprised] Raqam ro'yxatda bo'lsa, magnitdan tok uziladi va eshik ochiladi!"
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|KARTA TO'LOVI|QANDAY O'TADI?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: karta bilan to'lov qanday o'tadi?"
+  }
+ ]
+}

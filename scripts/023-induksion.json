@@ -1,0 +1,47 @@
+{
+ "title": "Induksion plita nega qo'lni kuydirmaydi?",
+ "style": "3d",
+ "scene": "induksion",
+ "key": "G",
+ "exp": {
+  "uzunlik": "qisqa"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.0,
+   "text": "INDUKSION PLITA|NEGA QO'LNI|*KUYDIRMAYDI*?",
+   "say": "[curious] Induksion plita nega qo'lni kuydirmaydi?"
+  },
+  {
+   "dur": 4.0,
+   "say": "[whispers] Oynaning ostida mis g'altak bor. U magnit maydon yaratadi."
+  },
+  {
+   "dur": 4.5,
+   "say": "[surprised] Maydon temir idishning o'zida tok uyg'otadi va uni qizdiradi!"
+  },
+  {
+   "dur": 3.4,
+   "say": "Qo'lda esa bunday tok deyarli hosil bo'lmaydi."
+  },
+  {
+   "dur": 3.2,
+   "say": ""
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|DOMOFON KALITI|QANDAY OCHADI?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: domofon kaliti eshikni qanday ochadi?"
+  }
+ ]
+}

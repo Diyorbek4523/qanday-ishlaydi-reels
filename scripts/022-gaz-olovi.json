@@ -1,0 +1,51 @@
+{
+ "title": "Gaz olovi nega ko'k?",
+ "style": "3d",
+ "scene": "gaz",
+ "key": "D",
+ "exp": {
+  "uzunlik": "uzun"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.2,
+   "text": "GAZ OLOVI NEGA|*KO'K*, GULXAN|NEGA *SARIQ*?",
+   "say": "[curious] Gaz plitadagi olov nega ko'k, gulxan esa sariq?"
+  },
+  {
+   "dur": 2.0,
+   "say": "[whispers] Sir havoda."
+  },
+  {
+   "dur": 3.4,
+   "say": "Gaz konforkaga borguncha havo bilan aralashadi."
+  },
+  {
+   "dur": 3.6,
+   "say": "Kislorod yetarli bo'lsa, gaz to'liq yonadi va ko'k nur chiqaradi."
+  },
+  {
+   "dur": 4.0,
+   "say": "[surprised] Gulxanda havo kam. Mayda qurum zarralari qizib, sariq yonadi!"
+  },
+  {
+   "dur": 3.0,
+   "say": "Gaz olovi sariq bo'lsa, demak havo yetmayapti."
+  },
+  {
+   "dur": 3.6,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|INDUKSION PLITA|SIRI",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: induksion plita nega qo'lni kuydirmaydi?"
+  }
+ ]
+}
