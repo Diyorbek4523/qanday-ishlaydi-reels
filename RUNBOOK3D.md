@@ -19,7 +19,7 @@ python engine3d/make3d.py scripts/NNN-slug.json out/NNN-slug.mp4             # t
 Blender: `C:\Program Files (x86)\Steam\steamapps\common\Blender\blender.exe` (5.2, EEVEE). Xato bo'lsa `out/NNN-slug_work/blender.log`.
 
 ## Ssenariy
-- 6-7 sahna, 25-30 s. Har sahna = bitta kamera kadri (sahna skriptida `shot(...)`).
+- 6-7 sahna, 24-30 s. **22 s dan qisqa QILMA** (2026-11-06: <=20.5 s bo'lgan 6 reelsdan 4 tasi deyarli 0 ko'rish oldi, 22 s+ hech biri). Har sahna = bitta kamera kadri (sahna skriptida `shot(...)`).
 - `say`: tabiiy og'zaki o'zbekcha, raqamlar so'z bilan. ElevenLabs v4 teglari ingliz tilida, kvadrat qavsda, gap boshida:
   `[curious]` savol, `[whispers]` sir/qiziqtirish, `[excited]` ochilish va oxirgi chaqiriq, `[surprised]`, `[laughs]` kamdan-kam.
   Har sahnada ko'pi bilan 1-2 teg. Teglar subtitrga chiqmaydi.
