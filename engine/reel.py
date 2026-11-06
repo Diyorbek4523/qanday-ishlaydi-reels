@@ -365,6 +365,15 @@ def music(dur, cuts, key='A', sr=44100):
 VOICE = {'id': 'agoC45V78njTIxYzwmSb', 'model': 'eleven_v4', 'lang': 'uz', 'settings': {'stability': 0.0, 'similarity_boost': 0.8}}  # Davronbek (Uzbek journalist); stability 0 + [tags] = the lively read the user picked (2026-11-01)
 LEAD, TAIL = .3, 1.2  # silence before the first word, hold after the last
 
+def eleven_key():
+    """The user-level Windows value wins over the inherited one, so a key changed in Windows works without restarting the app."""
+    if os.name == 'nt':
+        import winreg
+        try:
+            with winreg.OpenKey(winreg.HKEY_CURRENT_USER, 'Environment') as k: return winreg.QueryValueEx(k, 'ELEVENLABS_API_KEY')[0]
+        except OSError: pass
+    return os.environ['ELEVENLABS_API_KEY']
+
 def voice_take(S, cache, sr=44100):
     v = {**VOICE, **S.get('voice', {})}; says = [sc.get('say', '').strip() for sc in S['scenes']]
     text = ' '.join(x for x in says if x); key = hashlib.sha1(json.dumps([v, says]).encode()).hexdigest()[:12]
@@ -373,7 +382,7 @@ def voice_take(S, cache, sr=44100):
         body = {'text': text, 'model_id': v['model'], **({'language_code': v['lang']} if v.get('lang') and v['model'] == 'eleven_v4' else {}),
                 **({'voice_settings': v['settings']} if v.get('settings') else {})}  # e.g. {"stability": 0, "similarity_boost": .8} for a livelier read; [tags] in say steer emotion
         rq = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{v['id']}/with-timestamps?output_format=mp3_44100_128", json.dumps(body).encode(),
-                                    {'xi-api-key': os.environ['ELEVENLABS_API_KEY'], 'Content-Type': 'application/json'})
+                                    {'xi-api-key': eleven_key(), 'Content-Type': 'application/json'})
         r = json.load(urllib.request.urlopen(rq, timeout=300)); open(mp3, 'wb').write(base64.b64decode(r['audio_base64']))
         json.dump({'key': key, 'text': text, 'alignment': r['alignment']}, open(meta, 'w'), ensure_ascii=False)
     al = json.load(open(meta))['alignment']; t0 = al['character_start_times_seconds']; t1 = al['character_end_times_seconds']
