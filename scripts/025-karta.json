@@ -1,0 +1,52 @@
+{
+ "title": "Karta bilan to'lov qanday o'tadi?",
+ "style": "3d",
+ "scene": "karta",
+ "key": "A",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "shok-fakt"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.2,
+   "text": "KARTA TO'LOVI|2 SONIYADA|*3 JOYGA* BORADI!",
+   "say": "[excited] Karta bilan to'lov ikki soniyada uch joyga borib keladi!"
+  },
+  {
+   "dur": 3.0,
+   "say": "[whispers] Kartada ham batareya yo'q. Ichida antenna va chip yashiringan."
+  },
+  {
+   "dur": 3.6,
+   "say": "Terminal yaqinida antenna quvvat oladi, chip esa bir martalik maxfiy kod yaratadi."
+  },
+  {
+   "dur": 3.0,
+   "say": "Bu kod terminaldan protsessing markaziga uchadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "U yerdan sizning bankingizga. Pul yetadimi, karta haqiqiymi?"
+  },
+  {
+   "dur": 3.6,
+   "say": "[surprised] Bank rozi bo'lsa, javob orqaga qaytadi va terminalda yashil belgi yonadi!"
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|BANKA QOPQOG'I|NEGA *CHIRT* ETADI?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: banka qopqog'i nega chirt etadi?"
+  }
+ ]
+}

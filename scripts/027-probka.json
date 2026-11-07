@@ -1,0 +1,52 @@
+{
+ "title": "Avtomat probka qanday uriladi?",
+ "style": "3d",
+ "scene": "probka",
+ "key": "B",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "shok-fakt"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "PROBKA TOKNI|SONIYANING|*YUZDAN BIRIDA*|UZADI!",
+   "say": "[excited] Avtomat probka tokni soniyaning yuzdan birida uzib qo'yadi!"
+  },
+  {
+   "dur": 2.8,
+   "say": "[whispers] Uning ichida ikkita qo'riqchi yashiringan."
+  },
+  {
+   "dur": 3.4,
+   "say": "Birinchisi, bimetall plastinka. Simdan tok ko'p o'tsa, u qiziydi va asta egiladi."
+  },
+  {
+   "dur": 3.0,
+   "say": "Egilgan plastinka ilgakni turtadi, prujina esa kontaktni ochib yuboradi."
+  },
+  {
+   "dur": 3.6,
+   "say": "Ikkinchisi, g'altak. Qisqa tutashuvda tok keskin oshadi va g'altak magnitga aylanadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Magnit o'zakni bir zumda tortadi, kontakt uziladi, richag pastga tushadi!"
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|DAZMOL HARORATNI|QANDAY *USHLAYDI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: dazmol haroratni qanday ushlab turadi?"
+  }
+ ]
+}

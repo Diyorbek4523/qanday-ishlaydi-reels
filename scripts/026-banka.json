@@ -1,0 +1,52 @@
+{
+ "title": "Banka qopqog'i nega chirt etadi?",
+ "style": "3d",
+ "scene": "banka",
+ "key": "C",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.0,
+   "text": "BANKA QOPQOG'I|NEGA *CHIRT*|ETADI?",
+   "say": "[curious] Banka qopqog'i ochilganda nega chirt etadi?"
+  },
+  {
+   "dur": 3.2,
+   "say": "[whispers] Murabbo bankaga qaynoq holda solinadi va darhol yopiladi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Sovigan sari ichidagi bug' tomchiga aylanadi va havo siqiladi."
+  },
+  {
+   "dur": 3.6,
+   "say": "Ichkarida bosim pasayadi. Tashqi havo qopqoqni ichkariga bosib turadi."
+  },
+  {
+   "dur": 3.6,
+   "say": "Ochganingizda havo ichkariga otilib kiradi va qopqoq joyiga sakraydi: chirt!"
+  },
+  {
+   "dur": 3.8,
+   "say": "[surprised] Yangi banka chirt etmasa yoki qopqog'i bo'rtib tursa, uni yemang!"
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|AVTOMAT PROBKA|QANDAY *URILADI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: avtomat probka qanday uriladi?"
+  }
+ ]
+}
