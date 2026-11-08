@@ -15,6 +15,7 @@ import reel
 from PIL import Image
 
 BLENDER = os.environ.get('BLENDER', r'C:\Program Files (x86)\Steam\steamapps\common\Blender\blender.exe')
+PILL = r"+ OBUNA BO'LING\N{\fs38}HAR KUNI YANGI SIR"  # 2026-11-08: follow rate fell to 0.11% - say why to follow
 FPS = 30; YEL = r'{\c&H33CCFF&}'  # ASS colours are BGR: accent (255, 204, 51)
 
 def words(meta):
@@ -58,7 +59,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     if sc[0].get('text'): ev.append(f'Dialogue: 1,{ts(0)},{ts(starts[1])},Hook,,0,0,0,,{{\\fad(120,0)}}{styled(sc[0]["text"])}')
     if sc[-1].get('text'): ev.append(f'Dialogue: 1,{ts(end_t)},{ts(starts[-1])},End,,0,0,0,,{{\\fad(150,0)}}{styled(sc[-1]["text"])}\\N{{\\fs44\\c&HD0D0D0&}}@qanday_ishlaydi.uz')
     if S.get('follow_pill') and len(starts) > 3:  # silent follow prompt mid-video: most viewers leave before the end card (2026-11-05)
-        ev.append(f'Dialogue: 1,{ts(starts[1] + 1)},{ts(starts[1] + 5)},Pill,,0,0,0,,{{\\fad(150,150)}}+ OBUNA BO\'LING')
+        ev.append(f'Dialogue: 1,{ts(starts[1] + 1)},{ts(starts[1] + 5)},Pill,,0,0,0,,{{\\fad(150,150)}}{S.get("pill", PILL)}')
     ws = [(w.upper(), a + reel.LEAD, b + reel.LEAD) for w, a, b in ws if a + reel.LEAD < end_t - .05]
     chunks, cur = [], []
     for w in ws:  # 1-3 words, at most ~16 letters per chunk (fits one line), break after punctuation

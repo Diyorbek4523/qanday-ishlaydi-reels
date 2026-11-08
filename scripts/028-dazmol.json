@@ -1,0 +1,56 @@
+{
+ "title": "Dazmol haroratni qanday ushlab turadi?",
+ "style": "3d",
+ "scene": "dazmol",
+ "key": "A",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "shok-fakt"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "DAZMOL O'ZINI|O'ZI *O'CHIRIB*|TURADI!",
+   "say": "[excited] Dazmol ishlayotganda o'zini o'zi qayta-qayta o'chirib turadi!"
+  },
+  {
+   "dur": 2.8,
+   "say": "[whispers] Bu sirni ichidagi kichkina plastinka biladi."
+  },
+  {
+   "dur": 3.2,
+   "say": "Tagida qizdirgich spiral bor. Tok o'tsa, taglik qiziydi."
+  },
+  {
+   "dur": 4.0,
+   "say": "Plastinka ikki xil metalldan yopishtirilgan. Qiziganda biri ko'proq kengayadi va plastinka egiladi."
+  },
+  {
+   "dur": 3.2,
+   "say": "Egilgan plastinka kontaktni ajratadi. Tok uziladi, chiroqcha o'chadi."
+  },
+  {
+   "dur": 3.6,
+   "say": "[surprised] Taglik sovisa, plastinka to'g'rilanadi va tok yana ulanadi. Chirt etgan ovoz shu!"
+  },
+  {
+   "dur": 3.4,
+   "say": "Harorat murvati esa kontaktni plastinkaga yaqin yoki uzoq suradi."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|BRELOK KODINI|NEGA *O'G'IRLAB*|BO'LMAYDI?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: mashina brelogi kodini nega o'g'irlab bo'lmaydi?"
+  }
+ ]
+}

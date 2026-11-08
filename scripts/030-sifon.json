@@ -1,0 +1,52 @@
+{
+ "title": "Kanalizatsiya hidi nega uyga chiqmaydi?",
+ "style": "3d",
+ "scene": "sifon",
+ "key": "C",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.6,
+   "text": "KANALIZATSIYA|HIDI NEGA UYGA|*CHIQMAYDI*?",
+   "say": "[curious] Rakovina tagidagi quvur ochiq, lekin kanalizatsiya hidi nega uyga chiqmaydi?"
+  },
+  {
+   "dur": 2.6,
+   "say": "[whispers] Javob quvurning egri joyida yashiringan."
+  },
+  {
+   "dur": 3.0,
+   "say": "Rakovina tagidagi quvur U harfi shaklida bukilgan. Bu sifon."
+  },
+  {
+   "dur": 3.0,
+   "say": "Suv oqib ketganda, uning oxirgi qismi shu bukilgan joyda qolib ketadi."
+  },
+  {
+   "dur": 3.6,
+   "say": "Qolgan suv tiqindek quvurni berkitadi. Pastdan ko'tarilgan gaz undan o'tolmaydi."
+  },
+  {
+   "dur": 4.0,
+   "say": "[surprised] Shuning uchun uzoq ishlatilmagan rakovinadan hid keladi: suv bug'lanib ketgan bo'ladi!"
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|GAZLI SUV NEGA|*VISHILLAYDI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: gazli suv ochilganda nega vishillaydi?"
+  }
+ ]
+}

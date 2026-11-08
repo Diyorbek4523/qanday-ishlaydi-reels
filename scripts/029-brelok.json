@@ -1,0 +1,52 @@
+{
+ "title": "Mashina brelogi kodini nega o'g'irlab bo'lmaydi?",
+ "style": "3d",
+ "scene": "brelok",
+ "key": "B",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "shok-fakt"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "BRELOK HAR|BOSILGANDA *YANGI*|KOD YUBORADI!",
+   "say": "[excited] Mashina brelogi har bosilganda butunlay yangi kod yuboradi!"
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Aks holda o'g'ri kodni radiodan yozib olib, keyin o'zi yuborardi."
+  },
+  {
+   "dur": 3.0,
+   "say": "Brelok ichida hisoblagich bor. Har bosishda u bittaga oshadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Bu son maxfiy kalit bilan shifrlanadi va radio to'lqin bo'lib uchadi."
+  },
+  {
+   "dur": 3.2,
+   "say": "Mashina ham xuddi shu kalitni biladi. U kodni ochib, sonni tekshiradi."
+  },
+  {
+   "dur": 3.8,
+   "say": "[surprised] Son avvalgisidan katta bo'lsa, eshik ochiladi. Yozib olingan eski kod esa rad etiladi!"
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|KANALIZATSIYA HIDI|NEGA *CHIQMAYDI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: kanalizatsiya hidi nega uyga chiqmaydi?"
+  }
+ ]
+}
