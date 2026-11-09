@@ -1,0 +1,52 @@
+{
+ "title": "Kodli seyf raqamni qanday eslab qoladi?",
+ "style": "3d",
+ "scene": "seyf",
+ "key": "B",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "shok-fakt"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "SEYF QULFI ICHIDA|*G'ILDIRAKLAR*|YASHIRINGAN!",
+   "say": "[excited] Oddiy kodli seyf qulfining ichida kompyuter emas, uchta g'ildirak yashiringan!"
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Raqamli disk ortida hech qanday elektronika yo'q. Kod g'ildiraklarning holatida."
+  },
+  {
+   "dur": 3.4,
+   "say": "Disk ortidagi o'qqa uchta g'ildirak taqilgan. Har birining chetida kichik kesik bor."
+  },
+  {
+   "dur": 3.4,
+   "say": "Diskni goh o'ngga, goh chapga burganingizda, g'ildiraklar birma-bir ilinib, kerakli joyda to'xtab qoladi."
+  },
+  {
+   "dur": 3.4,
+   "say": "To'g'ri kod terilsa, uchala kesik bir chiziqqa tushadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Shunda tepadagi temir richag kesiklarga tushadi va zulfinni tortib, eshikni ochadi! Bitta raqam xato bo'lsa, richag tushmaydi."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|LIFT QAVATNI|QANDAY *BILADI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: lift qaysi qavatda turganini qanday biladi?"
+  }
+ ]
+}

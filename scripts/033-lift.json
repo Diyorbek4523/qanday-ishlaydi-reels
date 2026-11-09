@@ -1,0 +1,52 @@
+{
+ "title": "Lift qaysi qavatda turganini qanday biladi?",
+ "style": "3d",
+ "scene": "lift",
+ "key": "C",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "LIFT QAYSI|QAVATDA EKANINI|QANDAY *BILADI*?",
+   "say": "[curious] Lift qaysi qavatda turganini qanday biladi? Uning ko'zi yo'q-ku!"
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Lekin u hech qachon qavatni adashtirmaydi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Lift shaxtasida har bir qavat ro'parasiga kichik magnit yoki temir plastinka qotirilgan."
+  },
+  {
+   "dur": 3.4,
+   "say": "Kabinada esa datchik bor. Uning yonidan plastinka o'tishi bilan u signal beradi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Boshqaruv bloki signallarni sanaydi: bitta, ikkita, uchta. Demak, kabina uchinchi qavatda."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Motor o'qidagi hisoblagich esa aylanishlarni sanaydi va kabinani pol bilan bir tekisda, santimetr aniqlikda to'xtatadi!"
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|SENSORLI KRAN|QO'LNI QANDAY *SEZADI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: sensorli kran qo'lni qanday sezadi?"
+  }
+ ]
+}

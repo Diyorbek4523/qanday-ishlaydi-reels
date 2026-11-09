@@ -1,0 +1,52 @@
+{
+ "title": "Gazli suv ochilganda nega vishillaydi?",
+ "style": "3d",
+ "scene": "gazli_suv",
+ "key": "A",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol"
+ },
+ "follow_pill": true,
+ "voice": {
+  "id": "agoC45V78njTIxYzwmSb",
+  "model": "eleven_v4",
+  "lang": "uz",
+  "settings": {
+   "stability": 0.0,
+   "similarity_boost": 0.8
+  }
+ },
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "GAZLI SUV|OCHILGANDA NEGA|*VISHILLAYDI*?",
+   "say": "[curious] Gazli suv qopqog'ini ochganingizda, u nega vishillab yuboradi?"
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Chunki shishaning ichida ko'rinmas gaz qamalib turibdi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Zavodda suvga karbonat angidrid gazi bosim bilan haydaladi va qopqoq mahkam buraladi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Bosim ostida gaz suvda erib ketadi, shuning uchun suv tiniq ko'rinadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Qopqoq ochilishi bilan bosim birdan tushadi. Tepadagi gaz otilib chiqadi: mana shu vishillash."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Suvdagi gaz ham endi erib turolmaydi va pufakchalarga aylanadi. Iliq suvda gaz kamroq eriydi, shuning uchun u ko'proq ko'piradi!"
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|SEYF KODNI QANDAY|*ESLAYDI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: kodli seyf raqamni qanday eslab qoladi?"
+  }
+ ]
+}
