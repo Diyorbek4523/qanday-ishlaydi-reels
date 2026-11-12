@@ -1,0 +1,43 @@
+{
+ "title": "Televizor pulti kanalni qanday almashtiradi?",
+ "style": "3d",
+ "scene": "pult",
+ "key": "C",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "shok-fakt"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "PULT CHIROG'I|YONADI, LEKIN|KO'ZINGIZ *KO'RMAYDI*!",
+   "say": "[surprised] Pultning chirog'i har bosganingizda yonadi, lekin ko'zingiz uni ko'rmaydi!"
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Uning uchida kichik infraqizil chiroq turibdi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Tugmani bossangiz, pult ichidagi mikrosxema shu tugmaning kodini tanlaydi. Har tugmaning o'z raqami bor."
+  },
+  {
+   "dur": 3.4,
+   "say": "Chiroq bu kodni juda tez miltillab yuboradi: uzun va qisqa chaqnashlar, xuddi Morze alifbosidek."
+  },
+  {
+   "dur": 3.4,
+   "say": "Televizordagi qabul qilgich miltillashlarni yana raqamga aylantiradi va kanalni almashtiradi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[excited] Sinab ko'ring: telefon kamerasini pultga qaratib tugmani bosing. Ko'p telefonlarda chiroqning miltillashi ekranda ko'rinadi!"
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|MUZLATKICH ESHIGI|NEGA *YOPISHADI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: muzlatkich eshigi nega o'zi yopishib qoladi?"
+  }
+ ]
+}

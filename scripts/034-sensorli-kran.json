@@ -1,0 +1,17 @@
+{
+ "title": "Sensorli kran qo'lni qanday sezadi?",
+ "style": "3d",
+ "scene": "kran",
+ "key": "C",
+ "exp": {"uzunlik": "uzun", "hook": "savol"},
+ "follow_pill": true,
+ "scenes": [
+  {"dur": 3.4, "text": "SENSORLI KRAN|QO'LNI QANDAY|*SEZADI*?", "say": "[curious] Sensorli kran qo'lingizni qanday sezadi? Unda tugma ham, dastak ham yo'q-ku!"},
+  {"dur": 3.4, "say": "[whispers] Aslida u har soniyada atrofga ko'zga ko'rinmaydigan nur sochib turadi."},
+  {"dur": 3.4, "say": "Kran tagidagi kichik qora oynacha ortida infraqizil chiroq va uning yonida nur qabul qilgich bor."},
+  {"dur": 3.4, "say": "Qo'l yoki idish yaqinlashsa, nur undan qaytib, qabul qilgichga tushadi."},
+  {"dur": 3.4, "say": "Kichik boshqaruv bloki buni sezadi va elektromagnit klapanga tok beradi. Magnit tiqinni tortadi va suv yo'li ochiladi."},
+  {"dur": 3.4, "say": "[surprised] Qo'lingizni olsangiz, nur qaytmay qoladi va bir-ikki soniyada kran o'zi yopiladi. Suv bekorga oqmaydi!"},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|TV PULTI|KANALNI QANDAY *ALMASHTIRADI*?", "say": "[excited] Obuna bo'ling! Keyingi videoda: televizor pulti kanalni qanday almashtiradi?"}
+ ]
+}

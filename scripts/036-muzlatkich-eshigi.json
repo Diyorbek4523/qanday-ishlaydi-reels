@@ -1,0 +1,17 @@
+{
+ "title": "Muzlatkich eshigi nega o'zi yopishib qoladi?",
+ "style": "3d",
+ "scene": "eshik",
+ "key": "C",
+ "exp": {"uzunlik": "uzun", "hook": "shok-fakt"},
+ "follow_pill": true,
+ "scenes": [
+  {"dur": 3.4, "text": "MUZLATKICH ESHIGIDA|*MAGNIT*|YASHIRINGAN!", "say": "[surprised] Muzlatkich eshigining ichida magnit yashiringan! Shuning uchun eshik o'zi yopishib qoladi."},
+  {"dur": 3.4, "say": "[whispers] Eshik chetidagi yumshoq rezinaga qarang. U shunchaki rezina emas."},
+  {"dur": 3.4, "say": "Rezinaning ichida butun eshik bo'ylab egiluvchan magnit tasma yotibdi."},
+  {"dur": 3.4, "say": "Muzlatkich korpusi po'latdan. Eshik yaqinlashishi bilan magnit po'latga tortiladi va rezinani zich bosadi."},
+  {"dur": 3.4, "say": "Natijada tirqish qolmaydi: iliq havo ichkariga kirmaydi, sovuq esa tashqariga chiqmaydi."},
+  {"dur": 3.4, "say": "[surprised] Eshikni yopib, darhol qayta ochsangiz, og'irroq ochiladi. Chunki ichkariga kirgan iliq havo soviydi, siqiladi va eshikni ichkariga tortadi!"},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|BANKOMAT SOXTA PULNI|QANDAY *TANIYDI*?", "say": "[excited] Obuna bo'ling! Keyingi videoda: bankomat soxta pulni qanday taniydi?"}
+ ]
+}
