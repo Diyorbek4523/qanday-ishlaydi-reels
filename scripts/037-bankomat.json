@@ -1,0 +1,17 @@
+{
+ "title": "Bankomat soxta pulni qanday taniydi?",
+ "style": "3d",
+ "scene": "bankomat",
+ "key": "C",
+ "exp": {"uzunlik": "uzun", "hook": "savol"},
+ "follow_pill": true,
+ "scenes": [
+  {"dur": 3.4, "text": "BANKOMAT|*SOXTA PULNI*|QANDAY TANIYDI?", "say": "[curious] Bankomatga pul solasiz. U soxta pulni qanday taniydi?"},
+  {"dur": 3.4, "say": "[whispers] Pul ichkariga kirishi bilan, bir soniyaga yetmay bir nechta tekshiruvdan o'tadi."},
+  {"dur": 3.4, "say": "Birinchisi: datchiklar pulning o'lchami va qalinligini o'lchaydi. Ikkita pul yopishib qolsa ham sezadi."},
+  {"dur": 3.4, "say": "Ikkinchisi: ultrabinafsha nur. Haqiqiy pulda faqat yashirin belgilar yonadi."},
+  {"dur": 3.4, "say": "Uchinchisi: magnit datchik. Haqiqiy pulning bo'yog'ida va himoya ipida magnit zarralar bor."},
+  {"dur": 3.4, "say": "[surprised] Oddiy qog'oz esa nur ostida butunlay porlab ketadi. Bitta tekshiruvdan o'tolmasa ham, bankomat pulni qaytarib chiqaradi!"},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|VANTUZ TIQINNI|QANDAY *OCHADI*?", "say": "[excited] Obuna bo'ling! Keyingi videoda: vantuz tiqilgan rakovinani qanday ochadi?"}
+ ]
+}

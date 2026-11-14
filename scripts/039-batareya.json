@@ -1,0 +1,17 @@
+{
+ "title": "Batareyaning tepasi nega sovuq bo'lib qoladi?",
+ "style": "3d",
+ "scene": "batareya",
+ "key": "C",
+ "exp": {"uzunlik": "uzun", "hook": "shok-fakt"},
+ "follow_pill": true,
+ "scenes": [
+  {"dur": 3.4, "text": "BATAREYA ICHIDA|*HAVO*|TIQILIB QOLGAN!", "say": "[surprised] Batareyangizning tepasi sovuq bo'lsa, ichida havo tiqilib qolgan!"},
+  {"dur": 3.4, "say": "[whispers] Batareyaning ichida issiq suv aylanib yuradi va xonani isitadi."},
+  {"dur": 3.4, "say": "Lekin suv bilan birga quvurga havo pufakchalari ham kirib qoladi. Havo suvdan yengil, shuning uchun tepaga yig'iladi."},
+  {"dur": 3.4, "say": "Havo to'plangan joyga issiq suv kira olmaydi. Natijada batareyaning tepasi sovuq, pasti esa issiq bo'lib qoladi."},
+  {"dur": 3.4, "say": "Yechimi oddiy: batareya chetidagi kichkina kran. Uni Mayevskiy krani deyishadi."},
+  {"dur": 3.4, "say": "[excited] Uni sekin burasangiz, havo vishillab chiqib ketadi. Suv tomchilay boshlashi bilan yoping. Batareya yana to'liq isiydi!"},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|MASHINA KALITSIZ|QANDAY *OCHILADI*?", "say": "[excited] Obuna bo'ling! Keyingi videoda: mashina kalitsiz qanday ochiladi?"}
+ ]
+}

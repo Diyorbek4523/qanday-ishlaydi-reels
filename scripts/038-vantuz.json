@@ -1,0 +1,17 @@
+{
+ "title": "Vantuz tiqilgan rakovinani qanday ochadi?",
+ "style": "3d",
+ "scene": "vantuz",
+ "key": "C",
+ "exp": {"uzunlik": "uzun", "hook": "savol"},
+ "follow_pill": true,
+ "scenes": [
+  {"dur": 3.4, "text": "VANTUZ|*TIQINNI*|QANDAY OCHADI?", "say": "[curious] Rakovina tiqilib qoldi. Oddiy rezina vantuz uni qanday ochadi?"},
+  {"dur": 3.4, "say": "[whispers] Sir rezinada emas, suvda. Quvur ichida tiqin oldida suv to'planib turibdi."},
+  {"dur": 3.4, "say": "Vantuz teshikni zich yopadi. Bosganingizda suv siqilmaydi, shuning uchun butun kuch to'g'ri tiqinga uriladi."},
+  {"dur": 3.4, "say": "Tortganingizda esa suv tiqinni orqaga tortadi. Oldinga, orqaga, oldinga, orqaga."},
+  {"dur": 3.4, "say": "Shu zarbalardan tiqin bo'shashadi, parchalanadi va quvurdan oqib ketadi."},
+  {"dur": 3.4, "say": "[surprised] Shuning uchun rakovinada ozgina suv bo'lishi shart. Havo siqilib qoladi, suv esa kuchni yo'qotmasdan uzatadi!"},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|BATAREYA TEPASI|NEGA *SOVUQ*?", "say": "[excited] Obuna bo'ling! Keyingi videoda: batareyaning tepasi nega sovuq bo'lib qoladi?"}
+ ]
+}
