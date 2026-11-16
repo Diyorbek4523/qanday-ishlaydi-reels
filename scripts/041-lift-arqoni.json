@@ -1,0 +1,17 @@
+{
+ "title": "Lift arqoni uzilsa nega qulamaydi?",
+ "style": "3d",
+ "scene": "lift_tormoz",
+ "key": "C",
+ "exp": {"uzunlik": "uzun", "hook": "savol", "birinchi_kadr": "matnli"},
+ "follow_pill": true,
+ "scenes": [
+  {"dur": 3.4, "text": "LIFT ARQONI|UZILSA NEGA|*QULAMAYDI*?", "say": "[curious] Lift arqoni uzilib ketsa, kabina pastga qulab tushadimi?"},
+  {"dur": 3.4, "say": "[whispers] Avvalo, lift bitta arqonda emas, bir nechta po'lat arqonda osilib turadi. Har biri kabinani yolg'iz o'zi ko'tara oladi."},
+  {"dur": 3.4, "say": "Hammasi uzilsa ham, tepada yana bitta g'ildirak bor. U o'z arqoni orqali kabina qanchalik tez yurayotganini kuzatib turadi."},
+  {"dur": 3.4, "say": "Kabina juda tez tusha boshlasa, g'ildirak ichidagi yuklar chetga otilib, uni qulflab qo'yadi."},
+  {"dur": 3.4, "say": "[surprised] Shu zahoti kabina ostidagi po'lat ponalar relslarni mahkam qisadi va kabina bir zumda to'xtaydi!"},
+  {"dur": 3.4, "say": "Eng pastda esa yana bir himoya kutib turadi: zarbani yumshatadigan prujinalar."},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|LAMPOCHKA NEGA|YOQQANDA *KUYADI*?", "say": "[excited] Obuna bo'ling! Keyingi videoda: lampochka nega aynan yoqqan paytda kuyadi?"}
+ ]
+}
