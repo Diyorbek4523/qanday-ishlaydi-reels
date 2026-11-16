@@ -1,0 +1,17 @@
+{
+ "title": "Mashina kalitsiz qanday ochiladi?",
+ "style": "3d",
+ "scene": "kalitsiz",
+ "key": "A",
+ "exp": {"uzunlik": "uzun", "hook": "savol", "birinchi_kadr": "matnsiz"},
+ "follow_pill": true,
+ "scenes": [
+  {"dur": 3.4, "say": "[curious] Kalit cho'ntagingizda turibdi, lekin mashina o'zi ochiladi. Qanday qilib?"},
+  {"dur": 3.4, "say": "[whispers] Eshik tutqichiga qo'l tekkizishingiz bilan, mashina atrofga kuchsiz radio savol yuboradi."},
+  {"dur": 3.4, "say": "Bu savol atigi bir-ikki metrga yetadi. Shuning uchun uni faqat yaqindagi kalit eshitadi."},
+  {"dur": 3.4, "say": "Kalit uyg'onadi va savolga maxfiy shifr bilan javob qaytaradi. Savol har safar yangi, shuning uchun javobni oldindan ko'chirib bo'lmaydi."},
+  {"dur": 3.4, "say": "[excited] Javob to'g'ri chiqsa, eshik ochiladi. Bularning hammasi ko'z ochib yumguncha bo'ladi!"},
+  {"dur": 3.4, "say": "Salon ichida ham antennalar bor: kalit ichkarida bo'lsagina, motor tugma bilan yonadi."},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|LIFT ARQONI UZILSA|NEGA *QULAMAYDI*?", "say": "[excited] Obuna bo'ling! Keyingi videoda: lift arqoni uzilsa nega qulamaydi?"}
+ ]
+}
