@@ -6,6 +6,7 @@
 Script: {"title", "scene": "<scenes/*.py name>", "key", "voice": {..., "settings": {...}}, "scenes": [{"dur", "say", "text"?}]}
 "say" may carry ElevenLabs v4 tags ([curious], [excited], [whispers] ...); they steer the read and are left out of the captions.
 Scene 1 "text" is the hook title on top; the last scene's "text" is the end card (its words are not captioned).
+Client samples may set "tag" (top label, default QANDAY ISHLAYDI?) and "handle" (under the end card, default @qanday_ishlaydi.uz).
 --preview renders one half-size still from the middle of every shot into out/<name>_preview.png instead of the video.
 """
 import json, os, re, shutil, subprocess, sys, wave
@@ -55,9 +56,9 @@ Style: Pill,{font},52,&H00141414,&H00FFFFFF,&H0033CCFF,&H0033CCFF,0,0,0,0,100,10
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
     ev, sc = [], S['scenes']; end_t = starts[-2]
-    ev.append(f'Dialogue: 1,{ts(0)},{ts(starts[-1])},Tag,,0,0,0,,QANDAY ISHLAYDI?')
+    ev.append(f'Dialogue: 1,{ts(0)},{ts(starts[-1])},Tag,,0,0,0,,{S.get("tag", "QANDAY ISHLAYDI?")}')
     if sc[0].get('text'): ev.append(f'Dialogue: 1,{ts(0)},{ts(starts[1])},Hook,,0,0,0,,{{\\fad(120,0)}}{styled(sc[0]["text"])}')
-    if sc[-1].get('text'): ev.append(f'Dialogue: 1,{ts(end_t)},{ts(starts[-1])},End,,0,0,0,,{{\\fad(150,0)}}{styled(sc[-1]["text"])}\\N{{\\fs44\\c&HD0D0D0&}}@qanday_ishlaydi.uz')
+    if sc[-1].get('text'): ev.append(f'Dialogue: 1,{ts(end_t)},{ts(starts[-1])},End,,0,0,0,,{{\\fad(150,0)}}{styled(sc[-1]["text"])}\\N{{\\fs44\\c&HD0D0D0&}}{S.get("handle", "@qanday_ishlaydi.uz")}')
     if S.get('follow_pill') and len(starts) > 3:  # silent follow prompt mid-video: most viewers leave before the end card (2026-11-05)
         ev.append(f'Dialogue: 1,{ts(starts[1] + 1)},{ts(starts[1] + 5)},Pill,,0,0,0,,{{\\fad(150,150)}}{S.get("pill", PILL)}')
     ws = [(w.upper(), a + reel.LEAD, b + reel.LEAD) for w, a, b in ws if a + reel.LEAD < end_t - .05]
