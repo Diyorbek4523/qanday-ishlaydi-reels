@@ -52,7 +52,7 @@
 - [x] 041 LIFT arqoni uzilsa nega qulamaydi? (tezlik cheklagich + tutqichlar relsni qisadi; bino mexanizmi turi — lift 2365 ko'rish, 6 ulashish, 14.11)
 - [ ] Podyezd ESHIGI nega o'zi sekin yopiladi? (dovodchik: prujina + moy tor teshikdan o'tadi; bino mexanizmi turi, 14.11)
 - [ ] SUV HISOBLAGICH qancha suv ketganini qanday sanaydi? (parrak + magnit mufta, quruq hisoblagich; bino/uy turi, 14.11)
-- [ ] LAMPOCHKA nega aynan yoqqan paytda kuyadi? (sovuq sim qarshiligi past -> tok zarbasi, eng ingichka joy uziladi; uydagi muammo turi — vantuz 8098 ko'rish 3.5 soatda, 16.11; 041 da va'da qilingan)
+- [x] LAMPOCHKA nega aynan yoqqan paytda kuyadi? (sovuq sim qarshiligi past -> tok zarbasi, eng ingichka joy uziladi; uydagi muammo turi — vantuz 8098 ko'rish 3.5 soatda, 16.11; 041 da va'da qilingan)
 - [ ] KRAN nega tomchilab qoladi? (rezina prokladka yoki keramik kartrij eskiradi; uydagi muammo turi, 16.11)
 - [ ] ROZETKA nega qorayib, eriydi? (bo'sh kontakt -> qarshilik -> qizish; uydagi muammo turi, 16.11)
 - [ ] Devor burchagida nega MOG'OR paydo bo'ladi? (sovuq devor, shudring nuqtasi, namlik; uydagi muammo, qish, 16.11)

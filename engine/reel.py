@@ -378,14 +378,14 @@ def voice_take(S, cache, sr=44100):
     v = {**VOICE, **S.get('voice', {})}; says = [sc.get('say', '').strip() for sc in S['scenes']]
     text = ' '.join(x for x in says if x); key = hashlib.sha1(json.dumps([v, says]).encode()).hexdigest()[:12]
     mp3, meta = cache + '.voice.mp3', cache + '.voice.json'
-    if not (os.path.exists(meta) and json.load(open(meta)).get('key') == key):
+    if not (os.path.exists(meta) and json.load(open(meta, encoding='utf-8')).get('key') == key):
         body = {'text': text, 'model_id': v['model'], **({'language_code': v['lang']} if v.get('lang') and v['model'] == 'eleven_v4' else {}),
                 **({'voice_settings': v['settings']} if v.get('settings') else {})}  # e.g. {"stability": 0, "similarity_boost": .8} for a livelier read; [tags] in say steer emotion
         rq = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{v['id']}/with-timestamps?output_format=mp3_44100_128", json.dumps(body).encode(),
                                     {'xi-api-key': eleven_key(), 'Content-Type': 'application/json'})
         r = json.load(urllib.request.urlopen(rq, timeout=300)); open(mp3, 'wb').write(base64.b64decode(r['audio_base64']))
-        json.dump({'key': key, 'text': text, 'alignment': r['alignment']}, open(meta, 'w'), ensure_ascii=False)
-    al = json.load(open(meta))['alignment']; t0 = al['character_start_times_seconds']; t1 = al['character_end_times_seconds']
+        json.dump({'key': key, 'text': text, 'alignment': r['alignment']}, open(meta, 'w', encoding='utf-8'), ensure_ascii=False)
+    al = json.load(open(meta, encoding='utf-8'))['alignment']; t0 = al['character_start_times_seconds']; t1 = al['character_end_times_seconds']
     pcm = np.frombuffer(subprocess.run(['ffmpeg', '-loglevel', 'error', '-i', mp3, '-f', 's16le', '-ac', '1', '-ar', str(sr), '-'], capture_output=True, check=True).stdout, np.int16)
     # speech start of each scene (by character offset); scenes without "say" are kept at their own dur
     marks, pos = [], 0

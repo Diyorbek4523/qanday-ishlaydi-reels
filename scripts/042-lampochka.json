@@ -1,0 +1,43 @@
+{
+ "title": "Lampochka nega aynan yoqqan paytda kuyadi?",
+ "style": "3d",
+ "scene": "lampochka",
+ "key": "B",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol",
+  "birinchi_kadr": "matnsiz"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.4,
+   "say": "[curious] Lampochka nega ko'pincha aynan yoqqan paytda kuyadi?"
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Ichida sochdan ingichka volfram sim bor. Yonganda u ikki ming besh yuz darajagacha qiziydi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Sovuq sim esa tokni o'n baravarcha oson o'tkazadi. Yoqilgan lahzada undan katta tok zarbasi o'tadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Yillar davomida sim sekin bug'lanib, shishaga qora dog' bo'lib o'tiradi va bir joyi ingichkalashadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Tok zarbasida aynan shu ingichka joy eng tez qiziydi va erib uziladi!"
+  },
+  {
+   "dur": 3.4,
+   "say": "Shuning uchun eng xavfli payt — yoqilgan birinchi lahza."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|KRAN NEGA|*TOMCHILAYDI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: kran nega tomchilab qoladi?"
+  }
+ ]
+}
