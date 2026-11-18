@@ -1,0 +1,44 @@
+{
+ "title": "Kran nega tomchilab qoladi?",
+ "style": "3d",
+ "scene": "kran_tomchi",
+ "key": "C",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol",
+  "birinchi_kadr": "matnli"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "KRAN NEGA|*TOMCHILAB*|QOLADI?",
+   "say": "[curious] Kranni mahkam yopdingiz, lekin u baribir tomchilayapti. Nega?"
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Oddiy kran ichida rezina prokladka bor. Vint uni teshikka bosib, suvni to'sadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Suv esa doim bosim bilan itaradi. Yillar o'tib prokladka qotib, yoriladi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Endi u zich yopmaydi va suv tirqishdan sizib chiqadi!"
+  },
+  {
+   "dur": 3.4,
+   "say": "Dastakli kranlarda keramik disklar bor. Qum yoki ohak ularni tirnasa, ular ham suv o'tkazadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Bitta tomchi arzimasdek, lekin bir yilda ming litrlab suv behuda ketadi."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|ROZETKA NEGA|*QORAYADI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: rozetka nega qorayib eriydi?"
+  }
+ ]
+}
