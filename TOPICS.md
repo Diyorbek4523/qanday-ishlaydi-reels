@@ -54,6 +54,6 @@
 - [ ] SUV HISOBLAGICH qancha suv ketganini qanday sanaydi? (parrak + magnit mufta, quruq hisoblagich; bino/uy turi, 14.11)
 - [x] LAMPOCHKA nega aynan yoqqan paytda kuyadi? (sovuq sim qarshiligi past -> tok zarbasi, eng ingichka joy uziladi; uydagi muammo turi — vantuz 8098 ko'rish 3.5 soatda, 16.11; 041 da va'da qilingan)
 - [x] KRAN nega tomchilab qoladi? (rezina prokladka yoki keramik kartrij eskiradi; uydagi muammo turi, 16.11)
-- [ ] ROZETKA nega qorayib, eriydi? (043 da va'da qilingan — 19.11 birinchi reels) (bo'sh kontakt -> qarshilik -> qizish; uydagi muammo turi, 16.11)
+- [x] ROZETKA nega qorayib, eriydi? (043 da va'da qilingan — 19.11 birinchi reels) (bo'sh kontakt -> qarshilik -> qizish; uydagi muammo turi, 16.11)
 - [ ] Devor burchagida nega MOG'OR paydo bo'ladi? (sovuq devor, shudring nuqtasi, namlik; uydagi muammo, qish, 16.11)
 - [ ] MUZLATKICH ichida nega qalin muz qotadi? (eshik ochilganda nam havo kiradi, no frost isitgich; uydagi muammo, 16.11)

@@ -1,0 +1,44 @@
+{
+ "title": "Rozetka nega qorayib eriydi?",
+ "style": "3d",
+ "scene": "rozetka",
+ "key": "C",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol",
+  "birinchi_kadr": "matnli"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "ROZETKA NEGA|*QORAYIB*|ERIYDI?",
+   "say": "[curious] Rozetka nega qorayib, erib qoladi?"
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Ichida vilka shtirini ikkita mis plastinka qisib turadi. Tok shu yerdan o'tadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Yillar o'tib ular bo'shashadi va shtirga faqat bitta nuqtasi bilan tegadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Tor joyda qarshilik oshadi va o'sha nuqta qiziydi!"
+  },
+  {
+   "dur": 3.4,
+   "say": "Issiqdan mis oksidlanadi, qarshilik yana oshadi. Isitgich ulansa, qizish tezlashadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Oxiri plastmassa erib qorayadi. Rozetka iliq bo'lsa, uni almashtiring."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|DEVORDA NEGA|*MOG'OR* CHIQADI?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: devorda nega mog'or chiqadi?"
+  }
+ ]
+}
