@@ -1,0 +1,44 @@
+{
+ "title": "Devor burchagida nega mog'or chiqadi?",
+ "style": "3d",
+ "scene": "mogor",
+ "key": "C",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol",
+  "birinchi_kadr": "matnli"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "DEVOR BURCHAGIDA|NEGA *MOG'OR*|CHIQADI?",
+   "say": "[curious] Burchakda nega qora mog'or chiqadi?"
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Qishda burchak xonaning eng sovuq joyi: ikki tashqi devor shu yerda uchrashadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Havoda ko'zga ko'rinmas suv bug'i bor: nafasimiz, choy, ovqat."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Nam havo sovuq devorga tegsa, bug' tomchiga aylanadi!"
+  },
+  {
+   "dur": 3.4,
+   "say": "Havodagi mog'or sporalari nam devorga qo'nib, o'sib ketadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Davosi: xonani tez-tez shamollating, burchakka mebel taqamang."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|MUZLATKICHDA NEGA|*MUZ* QOTADI?",
+   "say": "[excited] Obuna bo'ling! Keyingisi: muzlatkichda nega muz qotadi?"
+  }
+ ]
+}
