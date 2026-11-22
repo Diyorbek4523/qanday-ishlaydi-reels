@@ -1,0 +1,17 @@
+{
+ "title": "Suv filtri suvni qanday tozalaydi?",
+ "style": "3d",
+ "scene": "suv_filtri",
+ "key": "A",
+ "exp": {"uzunlik": "uzun", "hook": "savol", "birinchi_kadr": "matnli"},
+ "follow_pill": true,
+ "scenes": [
+  {"dur": 3.4, "text": "SUV FILTRI|SUVNI QANDAY|*TOZALAYDI*?", "say": "[curious] Uydagi suv filtri suvni qanday tozalaydi?"},
+  {"dur": 3.4, "say": "Birinchi filtr qum va zang zarralarini ushlab qoladi."},
+  {"dur": 3.4, "say": "Keyin ko'mir filtri xlor va yoqimsiz hidni o'ziga yutadi."},
+  {"dur": 3.4, "say": "[whispers] Eng asosiysi, membrana. Teshiklari shunchalik maydaki, deyarli faqat suv molekulasi o'tadi."},
+  {"dur": 3.4, "say": "Bosim suvni membranadan itaradi, tuzlar esa o'tolmay, kanalizatsiyaga yuvilib ketadi."},
+  {"dur": 3.4, "say": "[surprised] Natijada suvdagi tuzlarning to'qson foizdan ortig'i ketadi!"},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|MASHINA MOYI NEGA|*ALMASHTIRILADI*?", "say": "[excited] Obuna bo'ling! Keyingi videoda: mashina moyi nega almashtiriladi?"}
+ ]
+}
