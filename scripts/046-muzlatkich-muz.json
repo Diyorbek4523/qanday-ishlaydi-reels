@@ -1,0 +1,43 @@
+{
+ "title": "Muzlatkichda nega qalin muz qotadi?",
+ "style": "3d",
+ "scene": "muz_qotish",
+ "key": "B",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol",
+  "birinchi_kadr": "matnsiz"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.4,
+   "say": "[curious] Muzlatkichda nega qalin muz qotib qoladi?"
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Har safar eshikni ochganingizda, ichkariga iliq va nam havo kiradi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Ichkarida minus o'n sakkiz daraja: bug' sovuq devorga tegib, darhol qirovga aylanadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Eshik rezinasi eskirsa, nam havo tinmay sizadi va muz qalinlashadi!"
+  },
+  {
+   "dur": 3.4,
+   "say": "Qalin muz sovuqni to'sadi: kompressor ko'p ishlaydi, tok ko'p ketadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "No Frost muzlatkichda isitgich qirovni o'zi eritib, suvni chiqarib yuboradi."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|SUV FILTRI SUVNI|QANDAY *TOZALAYDI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: suv filtri suvni qanday tozalaydi?"
+  }
+ ]
+}
