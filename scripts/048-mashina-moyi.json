@@ -1,0 +1,43 @@
+{
+ "title": "Mashina moyi nega almashtiriladi?",
+ "style": "3d",
+ "scene": "motor_moy",
+ "key": "B",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol",
+  "birinchi_kadr": "matnsiz"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.4,
+   "say": "[curious] Mashina moyini nega almashtirish kerak?"
+  },
+  {
+   "dur": 3.4,
+   "say": "Motor ichida porshen daqiqasiga minglab marta yuradi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Metall metallga tegmasin deb, orasida yupqa moy qatlami bor."
+  },
+  {
+   "dur": 3.4,
+   "say": "Vaqt o'tib, issiqdan moy buziladi, unga qurum va metall changi qo'shiladi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Eski moy qatlami yupqalashadi va metall ishqalanib yeyiladi!"
+  },
+  {
+   "dur": 3.4,
+   "say": "Shuning uchun moy ko'pincha har yetti-o'n ming kilometrda almashtiriladi."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|UZAYTIRGICH NEGA|*QIZIB* KETADI?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: uzaytirgich nega qizib ketadi?"
+  }
+ ]
+}
