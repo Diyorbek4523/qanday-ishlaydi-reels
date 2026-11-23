@@ -1,0 +1,17 @@
+{
+ "title": "Uzaytirgich nega qizib ketadi?",
+ "style": "3d",
+ "scene": "uzaytirgich",
+ "key": "A",
+ "exp": {"uzunlik": "uzun", "hook": "savol", "birinchi_kadr": "matnli"},
+ "follow_pill": true,
+ "scenes": [
+  {"dur": 3.4, "text": "UZAYTIRGICH|NEGA *QIZIB*|KETADI?", "say": "[curious] Uzaytirgich nega qizib ketadi?"},
+  {"dur": 3.4, "say": "Ko'p uzaytirgichlar o'n amperga, ya'ni taxminan ikki ming vattga mo'ljallangan."},
+  {"dur": 3.4, "say": "[whispers] Choynak va isitgichni birga ulasangiz, simdan ikki baravar ko'p tok o'tadi."},
+  {"dur": 3.4, "say": "[surprised] Tok ikki baravar oshsa, simdagi issiqlik to'rt baravar ortadi!"},
+  {"dur": 3.4, "say": "O'ralib qolgan sim issiqni chiqara olmaydi, izolyatsiya yumshab, eriy boshlaydi."},
+  {"dur": 3.4, "say": "Shuning uchun kuchli asboblarni alohida rozetkaga ulang, simni to'liq yoyib ishlating."},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|GAZ ALANGASI NEGA|*KO'K* BO'LADI?", "say": "[excited] Obuna bo'ling! Keyingi videoda: gaz plita alangasi nega ko'k bo'ladi?"}
+ ]
+}
