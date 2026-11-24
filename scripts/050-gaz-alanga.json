@@ -1,0 +1,17 @@
+{
+ "title": "Gaz alangasi nega ko'k bo'ladi?",
+ "style": "3d",
+ "scene": "gaz_alanga",
+ "key": "A",
+ "exp": {"uzunlik": "uzun", "hook": "savol", "birinchi_kadr": "matnli"},
+ "follow_pill": true,
+ "scenes": [
+  {"dur": 3.4, "text": "GAZ ALANGASI|NEGA *KO'K*|BO'LADI?", "say": "[curious] Gaz plita alangasi nega ko'k bo'ladi?"},
+  {"dur": 3.4, "say": "Gaz forsunkadan otilib chiqib, trubkada havoni o'zi bilan tortib aralashadi."},
+  {"dur": 3.4, "say": "[whispers] Kislorod yetarli bo'lsa, gaz to'liq yonadi va alanga ko'k, toza bo'ladi."},
+  {"dur": 3.4, "say": "[surprised] Teshiklar kir bilan tiqilsa, havo kamayadi va alanga sariq bo'ladi!"},
+  {"dur": 3.4, "say": "Sariq rang — yonmagan qurum zarralari. Qozon tagi qorayadi, is gazi chiqishi mumkin."},
+  {"dur": 3.4, "say": "Shuning uchun gorelkani tozalab turing va oshxonani shamollating."},
+  {"dur": 3.4, "text": "*OBUNA* BO'LING|KEYINGISI:|ZARYADKA NEGA|*QIZIYDI*?", "say": "[excited] Obuna bo'ling! Keyingi videoda: telefon zaryadkasi nega qiziydi?"}
+ ]
+}
