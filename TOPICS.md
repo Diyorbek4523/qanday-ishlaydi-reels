@@ -50,7 +50,7 @@
 - [x] 038 VANTUZ tiqilgan rakovinani qanday ochadi? (suv siqilmaydi, bosim zarbasi tiqinni suradi; uydagi muammo turi — sifon 13 marta ulashildi, 12.11)
 - [x] 039 BATAREYA (radiator) nega tepasi sovuq, pasti issiq bo'lib qoladi? (havo tiqini, Mayevskiy krani; uydagi muammo turi, 12.11)
 - [x] 041 LIFT arqoni uzilsa nega qulamaydi? (tezlik cheklagich + tutqichlar relsni qisadi; bino mexanizmi turi — lift 2365 ko'rish, 6 ulashish, 14.11)
-- [ ] Podyezd ESHIGI nega o'zi sekin yopiladi? (dovodchik: prujina + moy tor teshikdan o'tadi; bino mexanizmi turi, 14.11)
+- [x] Podyezd ESHIGI nega o'zi sekin yopiladi? (dovodchik: prujina + moy tor teshikdan o'tadi; bino mexanizmi turi, 14.11)
 - [x] SUV HISOBLAGICH qancha suv ketganini qanday sanaydi? (parrak + magnit mufta, quruq hisoblagich; bino/uy turi, 14.11)
 - [x] LAMPOCHKA nega aynan yoqqan paytda kuyadi? (sovuq sim qarshiligi past -> tok zarbasi, eng ingichka joy uziladi; uydagi muammo turi — vantuz 8098 ko'rish 3.5 soatda, 16.11; 041 da va'da qilingan)
 - [x] KRAN nega tomchilab qoladi? (rezina prokladka yoki keramik kartrij eskiradi; uydagi muammo turi, 16.11)

@@ -1,0 +1,44 @@
+{
+ "title": "Podyezd eshigi nega o'zi sekin yopiladi?",
+ "style": "3d",
+ "scene": "dovodchik",
+ "key": "A",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol",
+  "birinchi_kadr": "matnli"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "PODYEZD ESHIGI|NEGA *SEKIN* YOPILADI?",
+   "say": "[curious] Podyezd eshigi nega o'zi sekin yopiladi?"
+  },
+  {
+   "dur": 3.4,
+   "say": "Tepadagi bu quti — dovodchik. Eshikni ochsangiz, ichida prujina siqiladi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Qo'yib yuborsangiz, prujina eshikni itaradi. Lekin porshen oldida moy bor."
+  },
+  {
+   "dur": 3.4,
+   "say": "Moy faqat ingichka teshikdan o'tadi. U shoshmaydi, eshik ham sekin yopiladi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Mana bu vint teshikni toraytiradi. Usta tezlikni shu bilan sozlaydi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Oxirida moy kengroq yo'ldan o'tadi, va eshik taq etib yopiladi."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|KONDITSIONER|NEGA *TOMCHILAYDI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: konditsioner nega tomchilaydi?"
+  }
+ ]
+}
