@@ -1,0 +1,44 @@
+{
+ "title": "Suv hisoblagich qanday sanaydi?",
+ "style": "3d",
+ "scene": "suv_hisob",
+ "key": "A",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol",
+  "birinchi_kadr": "matnli"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "SUV HISOBLAGICH|QANDAY *SANAYDI*?",
+   "say": "[curious] Suv hisoblagich qancha suv ketganini qanday biladi?"
+  },
+  {
+   "dur": 3.4,
+   "say": "Ichida kichkina parrak bor. Kran ochilsa, suv uni aylantiradi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Har bir aylanish aniq miqdordagi suvga to'g'ri keladi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Parrakdagi magnit yopiq devor orqali tepadagi magnitni aylantiradi. Raqamlar quruq qoladi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Tishli g'ildiraklar aylanishni litrga aylantirib, raqamlarni suradi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Kran tomchilasa ham parrak sekin aylanib, sanashda davom etadi."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|PODYEZD ESHIGI|NEGA *SEKIN* YOPILADI?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: podyezd eshigi nega o'zi sekin yopiladi?"
+  }
+ ]
+}
