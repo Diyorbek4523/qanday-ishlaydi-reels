@@ -1,0 +1,43 @@
+{
+ "title": "Telefon zaryadkasi nega qiziydi?",
+ "style": "3d",
+ "scene": "zaryadka",
+ "key": "B",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol",
+  "birinchi_kadr": "matnsiz"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.4,
+   "say": "[curious] Zaryadka nega qiziydi? Uni tunda qoldirsa bo'ladimi?"
+  },
+  {
+   "dur": 3.4,
+   "say": "Rozetkada ikki yuz yigirma volt, telefonga esa besh volt kerak."
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Ichidagi transformator va mikrosxemalar kuchlanishni pasaytiradi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Bunda energiyaning bir qismi issiqlikka aylanadi, shuning uchun u iliq."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Batareya to'lgach, telefon zaryadlashni o'zi to'xtatadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Xavfi esa arzon, himoyasiz zaryadka va yostiq ostida zaryadlashda."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|SUV HISOBLAGICH|QANDAY *SANAYDI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: suv hisoblagich qanday sanaydi?"
+  }
+ ]
+}

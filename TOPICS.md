@@ -59,4 +59,4 @@
 - [x] MUZLATKICH ichida nega qalin muz qotadi? (eshik ochilganda nam havo kiradi, no frost isitgich; uydagi muammo, 16.11)
 - [x] UZAYTIRGICH (udlinitel) nega qizib ketadi? (ko'p kuchli asbob -> tok yig'indisi, ingichka sim qiziydi; uydagi xavf turi — rozetka 1796 ko'rish 7.5 soatda, 22.11)
 - [x] GAZ PLITA alangasi nega ko'k bo'lishi kerak, sariq bo'lsa nima? (to'liq yonmaslik, is gazi; uydagi xavf, 22.11)
-- [ ] Telefon ZARYADKASI nega qiziydi va tunda qoldirish xavflimi? (kuchlanish o'zgartirish yo'qotishi, batareya nazorati; uydagi xavf, 22.11)
+- [x] Telefon ZARYADKASI nega qiziydi va tunda qoldirish xavflimi? (kuchlanish o'zgartirish yo'qotishi, batareya nazorati; uydagi xavf, 22.11)
