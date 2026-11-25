@@ -1,0 +1,44 @@
+{
+ "title": "Konditsioner nega tomchilaydi?",
+ "style": "3d",
+ "scene": "konditsioner_tomchi",
+ "key": "B",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol",
+  "birinchi_kadr": "matnli"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.4,
+   "text": "KONDITSIONER|NEGA *TOMCHILAYDI*?",
+   "say": "[curious] Konditsionerdan nega suv tomchilaydi?"
+  },
+  {
+   "dur": 3.4,
+   "say": "Ichida muzdek radiator bor. Iliq havo undan o'tib soviydi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[whispers] Havodagi bug' sovuq plastinkada tomchiga aylanadi. Muzdek stakan terlagandek."
+  },
+  {
+   "dur": 3.4,
+   "say": "Suv tagliqqa oqib, shlang orqali tashqariga chiqadi. Issiq kunda bir necha litr bo'ladi."
+  },
+  {
+   "dur": 3.4,
+   "say": "[surprised] Filtr chang bo'lsa, radiator muzlaydi. Muz erisa, suv xonaga tomadi."
+  },
+  {
+   "dur": 3.4,
+   "say": "Shlang tiqilsa ham shunday. Filtrni har ikki-uch haftada yuving."
+  },
+  {
+   "dur": 3.4,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|KIR MASHINA|NEGA *SAKRAYDI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: kir yuvish mashinasi nega sakraydi?"
+  }
+ ]
+}

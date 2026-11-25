@@ -62,4 +62,4 @@
 - [x] Telefon ZARYADKASI nega qiziydi va tunda qoldirish xavflimi? (kuchlanish o'zgartirish yo'qotishi, batareya nazorati; uydagi xavf, 22.11)
 - [ ] Gaz KOLONKA / issiq suv BOJLERI suvni qanday isitadi va nega ba'zan o'chib qoladi? (suv oqimi datchigi, termopara; uydagi xavf, 25.11)
 - [ ] KIR YUVISH MASHINASI nega sakraydi va kir qanday siqiladi? (sentrifuga, muvozanat; uydagi muammo, 25.11)
-- [ ] Konditsioner nega tomchilaydi va filtrini nega tozalash kerak? (kondensat, drenaj; konditsioner mijozlari portfoliosi, 25.11)
+- [x] Konditsioner nega tomchilaydi va filtrini nega tozalash kerak? (kondensat, drenaj; konditsioner mijozlari portfoliosi, 25.11)
