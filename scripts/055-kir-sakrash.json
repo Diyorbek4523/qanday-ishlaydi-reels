@@ -1,0 +1,44 @@
+{
+ "title": "Kir yuvish mashinasi nega sakraydi?",
+ "style": "3d",
+ "scene": "kir_sakrash",
+ "key": "A",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol",
+  "birinchi_kadr": "matnli"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.6,
+   "text": "KIR MASHINA|NEGA *SAKRAYDI*?",
+   "say": "[curious] Kir yuvish mashinasi nega sakrab, joyidan yurib ketadi?"
+  },
+  {
+   "dur": 3.6,
+   "say": "Siqishda baraban minutiga ming martagacha aylanadi. Suv teshiklardan otilib chiqadi."
+  },
+  {
+   "dur": 3.6,
+   "say": "[whispers] Baraban qotirilmagan: tepada prujinalarga osilgan, pastdan amortizatorlar ushlab turadi."
+  },
+  {
+   "dur": 3.6,
+   "say": "Ustiga og'ir beton bo'lagi qo'yilgan. U chayqalishni bosib turadi."
+  },
+  {
+   "dur": 3.6,
+   "say": "[surprised] Lekin kir bir tomonga to'planib qolsa, baraban og'ir tomonga tortiladi va butun mashina silkinadi."
+  },
+  {
+   "dur": 3.6,
+   "say": "Yangi mashinada transport boltlari qolsa yoki pol qiyshiq bo'lsa ham sakraydi."
+  },
+  {
+   "dur": 3.6,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|GAZ KOLONKA|NEGA *O'CHADI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: gaz kolonka nega o'chib qoladi?"
+  }
+ ]
+}
