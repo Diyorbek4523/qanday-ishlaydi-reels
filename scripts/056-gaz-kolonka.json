@@ -1,0 +1,44 @@
+{
+ "title": "Gaz kolonka nega o'chib qoladi?",
+ "style": "3d",
+ "scene": "gaz_kolonka",
+ "key": "A",
+ "exp": {
+  "uzunlik": "uzun",
+  "hook": "savol",
+  "birinchi_kadr": "matnli"
+ },
+ "follow_pill": true,
+ "scenes": [
+  {
+   "dur": 3.6,
+   "text": "GAZ KOLONKA|NEGA *O'CHADI*?",
+   "say": "[curious] Gaz kolonka nega birdan o'chib, suv sovib qoladi?"
+  },
+  {
+   "dur": 3.6,
+   "say": "Jo'mrakni ochsangiz, suv oqimi membranani itaradi, u esa gaz klapanini ochadi."
+  },
+  {
+   "dur": 3.6,
+   "say": "[whispers] Uchqun gazni yoqadi, alanga mis quvurni qizdiradi va suv isiydi."
+  },
+  {
+   "dur": 3.6,
+   "say": "[surprised] Suv bosimi past bo'lsa, membrana kuchsiz itaradi va gaz yopiladi."
+  },
+  {
+   "dur": 3.6,
+   "say": "Batareya tugasa, uchqun ham, alanga datchigi ham ishlamaydi."
+  },
+  {
+   "dur": 3.6,
+   "say": "Mo'ri tiqilsa, tortish datchigi gazni o'chiradi. Bu sizni is gazidan saqlaydi!"
+  },
+  {
+   "dur": 3.6,
+   "text": "*OBUNA* BO'LING|KEYINGISI:|ELEKTR HISOBLAGICH|QANDAY *SANAYDI*?",
+   "say": "[excited] Obuna bo'ling! Keyingi videoda: elektr hisoblagich qanday sanaydi?"
+  }
+ ]
+}
